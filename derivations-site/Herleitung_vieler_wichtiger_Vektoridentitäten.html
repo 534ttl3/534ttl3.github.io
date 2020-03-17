@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<style type="text/css">
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
+    font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
+    font-weight: bold;
+    font-style: italic, oblique;
+  }
+
+
+  body {
+      font-family: "Computer Modern", sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+  }
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+	}
+}
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; }
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: auto;
+  position: relative;
+}
+
+.topbar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  float: left;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .topbar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar">
+    <a href="https://534ttl3.github.io/index.html">Home</a>
+    <a href="./sitemap.html">Sitemap</a>
+    <a href="javascript:window.location.href = 'https://github.com/534ttl3/' + document.URL.split('/').slice(0,-1).slice(-1)[0] + '/edit/master/org/' + document.URL.split('/').slice(-1)[0].split('.').slice(0, -1)[0] + '.org'">Edit this page on GitHub</a>
+  </div>
+</div>
+<div id="content">
+
+<div id="outline-container-orgbd90467" class="outline-2">
+<h2 id="orgbd90467"><span class="section-number-2">1</span> Beweise wichtiger Vektoridentitäten mit Hilfe des Levi-Civita Symbols und des Kronecker Deltas</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Zunächst ein paar Fakten:
+Sei <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_efef6f904ebb3d79a51877195cd37f5076849906.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>.
+Seien <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_90deb5a66521c9a819b1b76146cf0fcaf03d17f9.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> dreidimensionale Vektoren, deren zweite partielle Ableitung jeweils stetig ist. 
+</p>
+
+<p>
+Dann gelten folgende Vektoridentitäten:
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_b621de048afad31c9bd257716577147acee58675.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+1
+</span>
+</div>
+
+
+<p>
+Für <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_c23f73fe780b79f1bd26a89a3bf81f7e41431322.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> gelten die folgenden Darstellungen mit der Einsteinschen Summenkonvention (das Summenzeichen wird weggelassen, bei doppelt auftretenden Indices wird jeweils über alle möglichen Werte summiert):
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_e48b6e8de0590dfacb2e21a48e8be848611d3b86.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+2
+</span>
+</div>
+
+<p>
+Wir wollen diese beweisen, vorher jedoch noch ein kleiner Satz:
+</p>
+
+<p>
+Satz von Schwarz:
+</p>
+
+<p>
+Sind die zweiten partiellen Ableitungen von <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_2731a41f9daf49cea55b8929e9283f40b4279e3b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> stetig, so kann man deren Reihenfolge vertauschen (<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_33381688a17d4d51690313c68f6fb698921345d2.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_da0aca93fcec235cdcdc97b1219df29a7fc49cd5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+3
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_305f89616a9aa8c0eda403dba52564196c2a4165.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> 
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_52166922c72921599cfd70663627f51d6e5bf11e.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+4
+</span>
+</div>
+
+<p>
+Nach dem Satz von Schwartz können wir die Reihenfolge der partiellen Ableitungen (der <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_66c166a85e6e6a0f096aab5aeb4d16d7d2a0e61a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>'s)  vertauschen:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_c754b945649b750c16e5de3f598de123fb674c7a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+5
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_2750802a7d015725b11f14f2bdd1a171700b01e4.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_d2224576f016388acace5fd6c95e1d14e1ec7d99.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+6
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_72d3e37fd107b35360ce195b786056c0b94ca85e.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_3e38613dad210194346d59f4d6b07ca5d7192a2a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+7
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_b4838483205b0247af941a647eeebfd9aa98bc1d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_78ef02bb919df42267ed7fb8ef1629e7a2573bb5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+8
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_4ba856f8bb2d154ad6de2152d61779d6530794f6.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+9
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_05cc494b6cde9ee482cb957e40f88b008cfe6313.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_311612c0feb9d165aab7a690a94aa25bedf5eeb2.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+10
+</span>
+</div>
+
+<p>
+f) <object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_df2569373b0ec062b914378b6ab7d739d932f6f1.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Wir verwenden die Vektoridentität
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_5b1ce53f6932965c64a94b489fb06c2738decdea.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+11
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_8e1f07b0927df493434d3d0bce6a2e6aab54fa84.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+12
+</span>
+</div>
+
+<p>
+Dies gilt für jede Komponente
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_46a8e8b0e6034ab1722f747da478eaca4a101786.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_5bb3e102eb8656398eaf7fcd71ddda11f900af0c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> (Zyklische Vertauschung Spatprodukt Beweis)
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_8babf47559d17ca4a6668fc3559f312580597e0b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+13
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_ec34d6a2844209c173d37f040ebab5ca2bda1ea9.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+14
+</span>
+</div>
+
+<p>
+Von hier aus schreiben wir nun für den einen Fall:
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_7b277df3a14fa05f302256f538436b9baeceeb87.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+15
+</span>
+</div>
+
+<p>
+und für den anderen Fall gilt analog
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_ef56bbde1d19c56446066e5f8f299f5511c6501e.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+16
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_343cb199dee3bcb166aaac7d180a470863d9fa28.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_9bbdbb2628ab59a60dc79da55fe152893df1cfec.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+17
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_15aa2e71d0f0db2602d81585f41b74826212c2a9.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> 
+</p>
+
+<p>
+Die Summe auf der rechten Seite enthält zwei Teilsummen von der selben Struktur, weshalb wir nur eine Teilsumme davon ausrechnen müssen: 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_d913b09247048f62bb87957c72d0803d896f963e.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+18
+</span>
+</div>
+
+<p>
+Dann gilt das selbe für die andere Teilsumme, $  a<sub>m</sub>  $ und $ b<sub>m</sub> $  werden umgekehrt:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_b3233ec0190a39c6df302d0fe9639a75589f83e1.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+19
+</span>
+</div>
+
+<p>
+Die beiden Ergebnisse addiert ergeben die Summe, die entsteht, wenn man auf der linken Seite die Produktregel ausführt:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_919fb24cd7d7c1ff1d223ef721fdd8f9690ab0ba.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+20
+</span>
+</div>
+
+<p>
+Damit wäre diese Vektoridentität auch bewiesen.
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_7dadddecaba015745587545d5f02c3199f15b3fc.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> (bac-cab Regel Beweis)
+</p>
+
+<p>
+Dieser Zusammenhang von Kronecker-Delta und Epsilon-Tensor ist hier wichtig:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_d3da8163be53c9ec35cb65c72c0d1deebd491c16.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+21
+</span>
+</div>
+
+<ol class="org-ol">
+<li>Kreuzprodukt:</li>
+</ol>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_1231f0c02973171d9c3a5b24912db5ec2b2e0727.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+22
+</span>
+</div>
+
+<ol class="org-ol">
+<li>Kreuzprodukt:</li>
+</ol>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_c9fc21c5caaa65e694dcc65bfbe61f27ac283449.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+23
+</span>
+</div>
+
+<p>
+k-te Komponente des 1. Kreuzprodukts
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_34c4fc21c455975715be3e0ac4d95023ecd94916.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+24
+</span>
+</div>
+
+<p>
+Einsetzen und ausrechnen:
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_5e9b491d8fa753f8f48b2b383ba1441d2c6b296c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_46a5b886a76e644023a81340ba0ded23a90288fb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_e0672f798d334cea57313b82180d0d5d8df987cc.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_8a589a5da4436b84ce7c1029ecaf0a361bbef5fa.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_da4c97bcb7d75dc398276e3bf20a0bc8775cdac4.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_c2250f0cef1729abe35dbbe6f4d59749818f4c66.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_b91287cc110b1845c3d9a28d97caeed29ce85a3a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_651e095e2250f1adc71f39d7c2407fbc524705db.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="ltximg/Herleitung_vieler_wichtiger_Vektoridentitäten_0d9fe4dea731a4e0eacfd39625edc5bdc521cca7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+
+</div></body></html>
