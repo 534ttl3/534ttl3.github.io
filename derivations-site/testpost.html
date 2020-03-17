@@ -97,27 +97,35 @@
 <body>
 <div class="topbar">
   <div class="slidingtopbar">
-    <a href="https://534ttl3.github.io/index.html>Home</a>
-    <a href="javascript:function(){document.URL.split("/").slice(0,-1).join("/") + "/sitemap.html"}();">Sitemap</a>
-    <a href="">Edit this page on GitHub</a>
+    <a href="https://534ttl3.github.io/index.html">Home</a>
+    <a href="./sitemap.html">Sitemap</a>
+    <a href="javascript:window.location.href = 'https://github.com/534ttl3/' + document.URL.split('/').slice(0,-1).slice(-1)[0] + '/edit/master/org/' + document.URL.split('/').slice(-1)[0].split('.').slice(0, -1)[0] + '.org'">Edit this page on GitHub</a>
   </div>
 </div>
 <div id="content">
 
-<div id="outline-container-org66c6602" class="outline-2">
-<h2 id="org66c6602"><span class="section-number-2">1</span> What to implement on this blog</h2>
+<div id="outline-container-orgb8e8287" class="outline-2">
+<h2 id="orgb8e8287"><span class="section-number-2">1</span> Strategy</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orgc4fd3b2" class="outline-3">
-<h3 id="orgc4fd3b2"><span class="section-number-3">1.1</span> sitemap</h3>
-</div>
-<div id="outline-container-org40cffd5" class="outline-3">
-<h3 id="org40cffd5"><span class="section-number-3">1.2</span> links on all content pages</h3>
-<div class="outline-text-3" id="text-1-2">
 <p>
-dynamic topbar/sidebar go to sitemap, github and <i>edit this on github</i> (org file) pages
+to save the fragments 
+to the right
+target file, change 
+prefix and dir in 
+org-format-latex (org.el)
 </p>
-</div>
+
+<p>
+First, in org-html-format-latex (at preview) all the files are generated and written to the default directory. 
+</p>
+
+<p>
+For the export, they may be just written to another directory ?
+</p>
+
+<p>
+First, they generate absolute org-mode text links, before converting them to html links and writing the html links. 
+</p>
 </div>
 </div>
 
@@ -177,6 +185,13 @@ fig.tight_layout()
 fig.savefig(filename)
 filename
 </pre>
+</div>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="myfig.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
 </div>
 </div>
 </div>
