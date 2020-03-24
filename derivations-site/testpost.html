@@ -104,9 +104,152 @@
 </div>
 <div id="content">
 
-<div id="outline-container-org5853380" class="outline-2">
-<h2 id="org5853380"><span class="section-number-2">1</span> Strategy</h2>
+<div id="outline-container-orgdbce276" class="outline-2">
+<h2 id="orgdbce276"><span class="section-number-2">1</span> Latex Fragments</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org67b1b74" class="outline-3">
+<h3 id="org67b1b74"><span class="section-number-3">1.1</span> numbered equation environments</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_95df6b54d9d1d993adc7f3edcd6499bea0ee018d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+1
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_aed6d764ccc52175c4c839320e6c0c813ebd2117.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+2
+</span>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge290dc3" class="outline-3">
+<h3 id="orge290dc3"><span class="section-number-3">1.2</span> unnumbered equation environments</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_aed6d764ccc52175c4c839320e6c0c813ebd2117.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+</div>
+
+<p>
+Will it be numbered in the HTML output?
+</p>
+
+<p>
+No it isn't, great!
+</p>
+
+<p>
+Is it just because of the star? or because of the combination of equation and star?
+</p>
+
+<p>
+Let's test it if we add our dummy environment and render something in there: 
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_707265f8a99436a10444db6ba6c9980778dee635.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+3
+</span>
+</div>
+
+<p>
+Let's render the same thing, this time starred: 
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_adc631bf58cbb1d7d23676716b5f8ad230a70f9c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+</div>
+
+<p>
+Below this line a boxed environment is used
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_6acf01bb18c7fa77c46b5fef607957be24d4211d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e4395a" class="outline-2">
+<h2 id="org0e4395a"><span class="section-number-2">2</span> Graphics Rendering:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+SVG Bear 1: absolute path
+PNG Bear: 
+</p>
+
+
+<div class="figure">
+<p><img src="assets/bear.png" alt="bear.png" />
+</p>
+</div>
+
+<p>
+PDF Bear: 
+<a href="assets/bear.pdf">assets/bear.pdf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd08c95c" class="outline-2">
+<h2 id="orgd08c95c"><span class="section-number-2">3</span> Export block (to latex)</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9d60c83" class="outline-3">
+<h3 id="org9d60c83"><span class="section-number-3">3.1</span> Table</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b5b01c" class="outline-2">
+<h2 id="org5b5b01c"><span class="section-number-2">4</span> Source block (to latex)</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-latex"><span style="color: #5EC4FF;">\begin</span>{<span style="color: #4db5bd;">equation</span>}
+<span style="color: #5EC4FF;">\begin</span><span style="color: #5EC4FF;">{</span><span style="color: #4db5bd;">alignat*</span><span style="color: #5EC4FF;">}{1}</span>
+<span style="color: #5EC4FF;">a </span><span style="color: #EBBF83;">&amp;</span><span style="color: #5EC4FF;">= b</span><span style="color: #EBBF83;">\\</span>
+<span style="color: #5EC4FF;">  </span><span style="color: #EBBF83;">&amp;</span><span style="color: #5EC4FF;">= c </span>
+<span style="color: #5EC4FF;">\end</span><span style="color: #5EC4FF;">{</span><span style="color: #4db5bd;">alignat*</span><span style="color: #5EC4FF;">}</span>
+<span style="color: #5EC4FF;">\end</span>{<span style="color: #4db5bd;">equation</span>}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf406f8" class="outline-2">
+<h2 id="orgaf406f8"><span class="section-number-2">5</span> Strategy</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 to save the fragments 
 to the right
@@ -129,60 +272,63 @@ First, they generate absolute org-mode text links, before converting them to htm
 </div>
 </div>
 
-<div id="outline-container-org96b067e" class="outline-2">
-<h2 id="org96b067e"><span class="section-number-2">2</span> Test</h2>
-<div class="outline-text-2" id="text-2">
+
+
+
+<div id="outline-container-org0587a01" class="outline-2">
+<h2 id="org0587a01"><span class="section-number-2">6</span> Test</h2>
+<div class="outline-text-2" id="text-6">
 <p>
-<object type="image/svg+xml" data="ltximg/testpost_197a54b137c8bb7e1ba8df682d858914edd64301.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/testpost_c46e43bd969235f853e993486e6e7e5f41013a21.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2a216ca" class="outline-2">
-<h2 id="org2a216ca"><span class="section-number-2">3</span> Equation 1</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org09bda78" class="outline-2">
+<h2 id="org09bda78"><span class="section-number-2">7</span> Equation 1</h2>
+<div class="outline-text-2" id="text-7">
 
 <div class="equation-container">
 <span class="equation">
-<object type="image/svg+xml" data="ltximg/testpost_e6aedfe470cab113a462998c70741ad02a913022.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/testpost_657caedb0be6404a5222af0e9956808a8d838320.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </span>
 <span class="equation-label">
-1
+3
 </span>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf768335" class="outline-2">
-<h2 id="orgf768335"><span class="section-number-2">4</span> edited</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgeb26ef0" class="outline-2">
+<h2 id="orgeb26ef0"><span class="section-number-2">8</span> edited</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 from github
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7cedd65" class="outline-2">
-<h2 id="org7cedd65"><span class="section-number-2">5</span> Equation 2</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org0d1b8af" class="outline-2">
+<h2 id="org0d1b8af"><span class="section-number-2">9</span> Equation 2</h2>
+<div class="outline-text-2" id="text-9">
 
 <div class="equation-container">
 <span class="equation">
-<object type="image/svg+xml" data="ltximg/testpost_943a944498e50dde02dcededdef06b9542518f8a.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/testpost_536ad76f6be34a378fcf9459fdfcac0f6da6c435.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </span>
 <span class="equation-label">
-2
+4
 </span>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org75780bc" class="outline-2">
-<h2 id="org75780bc"><span class="section-number-2">6</span> plot</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgc8f0c78" class="outline-2">
+<h2 id="orgc8f0c78"><span class="section-number-2">10</span> plot</h2>
+<div class="outline-text-2" id="text-10">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #5EC4FF;">import</span> matplotlib.pyplot <span style="color: #5EC4FF;">as</span> plt
 <span style="color: #5EC4FF;">import</span> numpy <span style="color: #5EC4FF;">as</span> np
@@ -194,6 +340,13 @@ fig.tight_layout()
 fig.savefig(filename)
 filename
 </pre>
+</div>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="myfig.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
 </div>
 </div>
 </div>

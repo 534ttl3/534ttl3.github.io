@@ -339,20 +339,151 @@ margin-right: 1em;
   </div>
 </div>
 <div id="content">
-<div id="outline-container-org3570531" class="outline-2">
-<h2 id="org3570531"><span class="section-number-2"></span> On this website you can find </h2>
-<div class="outline-text-2" id="text-1">
+<h1 class="title">I'm in the Mood for Org</h1>
+<span class="posted">posted: 2020-03-24</span>
+<span class="lastedited">last edited: 2020-03-25 mer. 00:51</span>
+
+<div id="outline-container-orgaa38619" class="outline-2">
+<h2 id="orgaa38619"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> Make a post-export filter that scans for font-lock-keywords and adds the right color filter to them.</h2>
 </div>
-<div id="outline-container-orge4c0a3b" class="outline-3">
-<h3 id="orge4c0a3b"><span class="section-number-3"><span>&#8226;</span> </span> <a href="derivations-site/sitemap.html">Derivations</a></h3>
+<div id="outline-container-org7c8bcd7" class="outline-2">
+<h2 id="org7c8bcd7"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Make a script that checks all dates of all <span class="underline">posts</span> <span class="underline">and</span> all <i>modified</i> dates of all org files in general, and that updates them</h2>
 </div>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org0685233" class="outline-2">
+<h2 id="org0685233"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> export the <code>#+TITLE</code> and <code>#+DATE</code> at the top of the page (if they are there)</h2>
+</div>
+<div id="outline-container-org7f8dff2" class="outline-2">
+<h2 id="org7f8dff2"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> modify backend html export function to include boxes and labels around code blocks</h2>
+</div>
+<div id="outline-container-org0c00385" class="outline-2">
+<h2 id="org0c00385"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> write script which only publishes one particular file</h2>
+<div class="outline-text-2" id="text-5">
 <p>
-These are touching on different topics.
+<a href="https://emacs.stackexchange.com/questions/18324/publishing-a-single-file-via-org-publish">https://emacs.stackexchange.com/questions/18324/publishing-a-single-file-via-org-publish</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2928408" class="outline-2">
+<h2 id="org2928408"><span class="section-number-2">6</span> Idiosyncracies</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+annoying, but more or less hard to fix: 
+</p>
+</div>
+<div id="outline-container-org4b3a5dd" class="outline-3">
+<h3 id="org4b3a5dd"><span class="section-number-3">6.1</span> SVG HTML export size issue</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+If you export to html and embed an svg like this
+</p>
+<div class="org-src-container">
+<pre class="src src-org"><span style="font-weight: bold; font-style: italic;">#+ATTR_ORG: :width 600</span>
+<span style="font-weight: bold; font-style: italic;">#+ATTR_HTML: :width 500px</span>
+<span style="text-decoration: underline;"><a href="file:printTabelle.svg">file:printTabelle.svg</a></span>
+</pre>
+</div>
+
+<p>
+Or you could embed it specifically with explicit html, even an oversized version (but then you have to be smart about overflowing it correctly when screen width is small)
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">style</span>&gt;
+.oversized {
+margin-left: 50%;
+transform: translateX(-50%);
+}
+&lt;/<span style="font-weight: bold;">style</span>&gt;
+&lt;<span style="font-weight: bold;">img</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"oversized"</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"printTabelle.svg"</span> <span style="font-weight: bold; font-style: italic;">style</span>=<span style="font-style: italic;">"width: 150%"</span>&gt;&lt;/<span style="font-weight: bold;">img</span>&gt;
+</pre>
+</div>
+
+<style>
+.oversized {
+margin-left: 50%;
+transform: translateX(-50%);
+}
+</style>
+<img class="oversized" src="printTabelle.svg" style="width: 100%"></img>
+</div>
+
+<div id="outline-container-orge51a0b5" class="outline-4">
+<h4 id="orge51a0b5"><span class="section-number-4">6.1.1</span> version info</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(concat <span style="font-style: italic;">"Emacs version: \t"</span> (emacs-version) <span style="font-style: italic;">"; \n org-mode version: \t"</span> (org-version))
+</pre>
+</div>
+
+<pre class="example">
+Emacs version: 	GNU Emacs 26.3 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.22.30)
+ of 2019-09-16; 
+ org-mode version: 	9.3.2
+</pre>
+</div>
+</div>
+<div id="outline-container-org7c97575" class="outline-4">
+<h4 id="org7c97575"><span class="section-number-4">6.1.2</span> solution</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+just convert svg to png on the terminal and embed the png
 </p>
 </div>
 </div>
 </div>
-</body></html>
+</div>
+
+<div id="outline-container-org808d215" class="outline-2">
+<h2 id="org808d215"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> See what happens when you try to e.g. publish your music table (as embedded svg)</h2>
+</div>
+<div id="outline-container-org5fabef9" class="outline-2">
+<h2 id="org5fabef9"><span class="section-number-2">8</span> <span class="done DONE">DONE</span> Figure out how to <i>not</i> have a numbering for <b>every</b> latex environment at html export</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Only those latex environments with a label tag, or equations should have a numbering.
+</p>
+
+<p>
+Any starred environment won't have a label! If you want to typeset anything using latex, just put a starred dummy environment like so: 
+</p>
+<pre class="example">
+#+LATEX_HEADER: \newenvironment*{orgfrag}{}{}
+</pre>
+<p>
+and then put this into the body of your org file: 
+</p>
+<pre class="example">
+\begin{orgfrag*}
+Hello
+\end{orgfrag*}
+</pre>
+<p>
+If you want an svg instead of the usual png, use
+</p>
+<pre class="example">
+#+OPTIONS: tex:dvisvgm
+</pre>
+<p>
+at the top of your org file. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">import</span> matplotlib.pyplot <span style="font-weight: bold;">as</span> plt
+<span style="font-weight: bold;">import</span> numpy <span style="font-weight: bold;">as</span> np
+plt.plot(*np.random.rand(10, 10)) 
+<span style="font-weight: bold; font-style: italic;">filename</span> = <span style="font-style: italic;">"this.svg"</span>
+plt.savefig(filename)
+filename
+</pre>
+</div>
 
 
+<div class="figure">
+<p><object type="image/svg+xml" data="this.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+
+</div></body></html>
