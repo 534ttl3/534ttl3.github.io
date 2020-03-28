@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><head>
+<!-- 2020-03-27 ven. 23:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>I'm in the Mood for Org</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="chris" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type="text/css">
+ pre.src {background-color: #1D252C; color: #A0B3C5;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+
+<title></title>
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+  }
+
+  .slidingtopbar {
+      overflow: hidden;
+      width: 800px;
+  }
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+	}
+}
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; }
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: auto;
+  position: relative;
+}
+
+.topbar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  float: left;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .topbar a {
+    text-align: center;
+    float: none;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar">
+    <a href="https://534ttl3.github.io/index.html">Home</a>
+    <a href="./sitemap.html">Sitemap</a></div>
+</div>
+<div id="content">
+<h1 class="title">I'm in the Mood for Org</h1>
+<span class="posted">posted: 2020-03-24</span>
+
+<div id="outline-container-org8af83d5" class="outline-2">
+<h2 id="org8af83d5"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> First, generate home.org from the updated org files, then publish all the files together to html</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</div>
+
+<div id="outline-container-org40720c2" class="outline-2">
+<h2 id="org40720c2"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> Make a script that recusively collects post dates and modified dates of all org files (that were posted into the repo's doc repository, which is later published).</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The returned tuple from each org file needs to look like this: 
+(post<sub>title</sub>, post<sub>date</sub>, modified<sub>date</sub>, html<sub>file</sub><sub>path</sub>)
+</p>
+
+<p>
+Then, on the page, print out all of these data tuples. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaff27b1" class="outline-2">
+<h2 id="orgaff27b1"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> export the <code>#+TITLE</code> and <code>#+DATE</code> at the top of the page (if they are there)</h2>
+</div>
+<div id="outline-container-org37db1fc" class="outline-2">
+<h2 id="org37db1fc"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> modify backend html export function to include boxes and labels around code blocks</h2>
+</div>
+<div id="outline-container-org7dbd37f" class="outline-2">
+<h2 id="org7dbd37f"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> write script which only publishes one particular file</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://emacs.stackexchange.com/questions/18324/publishing-a-single-file-via-org-publish">https://emacs.stackexchange.com/questions/18324/publishing-a-single-file-via-org-publish</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f9e617" class="outline-2">
+<h2 id="org6f9e617"><span class="section-number-2">6</span> Idiosyncracies</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+annoying, but more or less hard to fix: 
+</p>
+</div>
+<div id="outline-container-orgeb0bddd" class="outline-3">
+<h3 id="orgeb0bddd"><span class="section-number-3">6.1</span> SVG HTML export size issue</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+If you export to html and embed an svg like this
+</p>
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #808e9b;">#+ATTR_ORG: :width 600</span>
+<span style="color: #808e9b;">#+ATTR_HTML: :width 500px</span>
+<span style="color: #5EC4FF; font-weight: bold; text-decoration: underline;"><a href="file:printTabelle.svg">file:printTabelle.svg</a></span>
+</pre>
+</div>
+
+<p>
+Or you could embed it specifically with explicit html, even an oversized version (but then you have to be smart about overflowing it correctly when screen width is small)
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #4db5bd;">style</span>&gt;
+.oversized {
+margin-left: 50%;
+transform: translateX(-50%);
+}
+&lt;/<span style="color: #4db5bd;">style</span>&gt;
+&lt;<span style="color: #4db5bd;">img</span> <span style="color: #9CAABB;">class</span>=<span style="color: #7FA0B7;">"oversized"</span> <span style="color: #9CAABB;">src</span>=<span style="color: #7FA0B7;">"printTabelle.svg"</span> <span style="color: #9CAABB;">style</span>=<span style="color: #7FA0B7;">"width: 150%"</span>&gt;&lt;/<span style="color: #4db5bd;">img</span>&gt;
+</pre>
+</div>
+
+<style>
+.oversized {
+margin-left: 50%;
+transform: translateX(-50%);
+}
+</style>
+<img class="oversized" src="printTabelle.svg" style="width: 100%"></img>
+</div>
+
+<div id="outline-container-org780bf20" class="outline-4">
+<h4 id="org780bf20"><span class="section-number-4">6.1.1</span> version info</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(concat <span style="color: #7FA0B7;">"Emacs version: \t"</span> (emacs-version) <span style="color: #7FA0B7;">"; \n org-mode version: \t"</span> (org-version))
+</pre>
+</div>
+
+<pre class="example">
+Emacs version: 	GNU Emacs 26.3 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.22.30)
+ of 2019-09-16; 
+ org-mode version: 	9.3.2
+</pre>
+</div>
+</div>
+<div id="outline-container-org912045f" class="outline-4">
+<h4 id="org912045f"><span class="section-number-4">6.1.2</span> solution</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+just convert svg to png on the terminal and embed the png
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a0bde5" class="outline-2">
+<h2 id="org8a0bde5"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> See what happens when you try to e.g. publish your music table (as embedded svg)</h2>
+</div>
+<div id="outline-container-org8d4d9cd" class="outline-2">
+<h2 id="org8d4d9cd"><span class="section-number-2">8</span> <span class="done DONE">DONE</span> Figure out how to <i>not</i> have a numbering for <b>every</b> latex environment at html export</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Only those latex environments with a label tag, or equations should have a numbering.
+</p>
+
+<p>
+Any starred environment won't have a label! If you want to typeset anything using latex, just put a starred dummy environment like so: 
+</p>
+<pre class="example">
+#+LATEX_HEADER: \newenvironment*{orgfrag}{}{}
+</pre>
+<p>
+and then put this into the body of your org file: 
+</p>
+<pre class="example">
+\begin{orgfrag*}
+Hello
+\end{orgfrag*}
+</pre>
+<p>
+If you want an svg instead of the usual png, use
+</p>
+<pre class="example">
+#+OPTIONS: tex:dvisvgm
+</pre>
+<p>
+at the top of your org file. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #5EC4FF;">import</span> matplotlib.pyplot <span style="color: #5EC4FF;">as</span> plt
+<span style="color: #5EC4FF;">import</span> numpy <span style="color: #5EC4FF;">as</span> np
+plt.plot(*np.random.rand(10, 10)) 
+<span style="color: #9CAABB;">filename</span> = <span style="color: #7FA0B7;">"this.svg"</span>
+plt.savefig(filename)
+filename
+</pre>
+</div>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="this.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+
+</div></body></html>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><head>
+<!-- 2020-03-28 sam. 22:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Herleitung der Wellengleichungen elektromagnetischer Wellen aus den Maxwellgleichungen</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="chris" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type="text/css">
+ pre.src {background-color: unspecified-bg; color: unspecified-fg;}</style>
+<style type="text/css">
+ pre.src {background-color: unspecified-bg; color: unspecified-fg;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+
+<title></title>
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+  }
+
+  .slidingtopbar {
+      overflow: hidden;
+      width: 800px;
+  }
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+	}
+}
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; }
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: auto;
+  position: relative;
+}
+
+.topbar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  float: left;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .topbar a {
+    text-align: center;
+    float: none;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar">
+    <a href="https://534ttl3.github.io/index.html">Home</a>
+    <a href="./sitemap.html">Sitemap</a></div>
+</div>
+<div id="content">
+<h1 class="title">Herleitung der Wellengleichungen elektromagnetischer Wellen aus den Maxwellgleichungen</h1>
+<span class="posted">posted: 2020-03-28</span>
+<p>
+Gaussches Gesetz für Elektrische Felder:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_f99c1d7fd919dbc5152da20e8b8482fec448c15c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+1
+</span>
+</div>
+
+<p>
+wird hier zu 
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_9c2278bb62e9343786cdc21eb902852736a4e626.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+da die Ladungsdichte <object type="image/svg+xml" data="ltximg/electromagneticwaves_a114b83b8b8ed86dc95738161924953e1adb30f9.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, da keine Ladung vorhanden ist.
+</p>
+
+<p>
+Gaussches Gesetz für Magnetfelder:
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_71a79d3e70722611c105103e16835f72721e8e59.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Induktionsgesetz:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_9c9abeea2a5584c60fc505bdb2df3bc45bc6f502.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+2
+</span>
+</div>
+
+<p>
+Ampere-Maxwell'sches Druchflutungsgesetz
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_bf2a75d446b0b1d631434e36f2db28dbce9bb5b1.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+wird hier, im Fall des Vakuums (<object type="image/svg+xml" data="ltximg/electromagneticwaves_054b0852397f0019a250ab2ef20bba5ec4d9cb5d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) und der Abwesenheit von äußeren Strömen (<object type="image/svg+xml" data="ltximg/electromagneticwaves_65ed581a03f70c41b5cf78d459c37724f05007b7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) zu:
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_f61eda54ac2342f3bbe5f05b3853291cc3a2c4b7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Differentialgleichung des Elektrischen Feldes
+Wir beginnen mit dem Induktionsgesetz (3):
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_c11cecf90a8a0c3dbf2f9a04036d0b02272642e5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Dann bilden wir die Rotation (<object type="image/svg+xml" data="ltximg/electromagneticwaves_f025eca469070080d72fb5374781e85c0c066874.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) auf beiden Seiten:
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_6cb832c03fa7ddd919c8f9ab26500d19b7fe9906.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Die Rotation kann in die partielle Zeitableitung hineingezogen werden:
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_6de538e557aae12391281ff291e5f90cc1814bf5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Wir erkennen auf der rechten Seite das Durchflutungsgesetz (4). 
+Außerdem verwenden wir auf der linken Seite die Vektoridentität <object type="image/svg+xml" data="ltximg/electromagneticwaves_268ccafc0d8cc453e55e807e51fd62da364eb398.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>:
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_13c5b76b1f585162abed65c536bb6a9d22ec0df7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Wir erkennen die 1. Maxwellsche Gleichung auf der linken Seite und der Ausdruck reduziert sich zu einer typischen Wellengleichung:
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_7471e342610ef2258689c9f2b2845ec89bea93ad.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Wellengleichungen (wie z.B. in der Mechanik) sehen folgendermaßen aus:
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_89c552ca44ce33b89b2a0985334f2380177c52ea.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<p>
+Daher gilt hier <object type="image/svg+xml" data="ltximg/electromagneticwaves_0fe8df1275d97912bfe9ce57276a137f9196134a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>  <object type="image/svg+xml" data="ltximg/electromagneticwaves_ca58f127fbc3aa897c11d0b61da75342aba5aefa.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> , die Vakuum-Lichtgeschwindigkeit.
+</p>
+
+<p>
+<object type="image/svg+xml" data="ltximg/electromagneticwaves_a7c00f9aad54d700386a85fcd158e7eb2ddfcecb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+</div></body></html>
