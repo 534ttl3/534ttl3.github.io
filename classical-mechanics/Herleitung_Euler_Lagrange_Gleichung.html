@@ -8,7 +8,7 @@
 <!-- 2020-03-29 dim. 20:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>I'm in the Mood for Org</title>
+<title>Herleitung der Euler-Lagrange Gleichung (Lagrange-Gleichung 2. Art)</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="chris" />
 <style type="text/css">
@@ -573,10 +573,6 @@
  pre.src {background-color: #1D252C; color: #A0B3C5;}</style>
 <style type="text/css">
  pre.src {background-color: #1D252C; color: #A0B3C5;}</style>
-<style type="text/css">
- pre.src {background-color: #1D252C; color: #A0B3C5;}</style>
-<style type="text/css">
- pre.src {background-color: #1D252C; color: #A0B3C5;}</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -723,202 +719,200 @@ margin-top: 25px;
 </head>
 <body>
 <div class="topbar">
-  <div class="slidingtopbar"><a href="./index.html">Home</a><a href="./sitemap.html">Sitemap</a><a href="https://github.com/534ttl3/derivations-site/./blob/master/org/testpost.org">Edit on Github</a></div>
+  <div class="slidingtopbar"><a href="../index.html">Home</a><a href="../sitemap.html">Sitemap</a><a href="https://github.com/534ttl3/derivations-site/./blob/master/org/classical-mechanics/Herleitung_Euler_Lagrange_Gleichung.org">Edit on Github</a></div>
 </div>
 <div id="content">
-<h1 class="title">I'm in the Mood for Org</h1>
-<span class="posted">posted: 2020-03-26</span>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org532943b">1. Latex Fragments</a>
-<ul>
-<li><a href="#org3127eef">1.1. nbrd equation environments</a></li>
-</ul>
-</li>
-<li><a href="#orgdac621d">2. Graphics Rendering:</a></li>
-<li><a href="#orgd2d6912">3. Export block (to latex)</a>
-<ul>
-<li><a href="#org5c6aafc">3.1. Table</a></li>
-</ul>
-</li>
-<li><a href="#org4475997">4. Source block (to latex)</a></li>
-<li><a href="#org089b6ac">5. Strategy</a></li>
-<li><a href="#org31e8059">6. Test</a></li>
-<li><a href="#org6204995">7. Equation 1</a></li>
-<li><a href="#org62df9e6">8. edited</a></li>
-<li><a href="#orgd63743f">9. Equation 2</a></li>
-<li><a href="#org7b05fee">10. plot</a></li>
-</ul>
-</div>
-</div>
+<h1 class="title">Herleitung der Euler-Lagrange Gleichung (Lagrange-Gleichung 2. Art)</h1>
 <p>
-published?
-changed again
-update
+Die Euler-Lagrange-Gleichung ist eine Differentialgleichung 2. Grades einer Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_7ae917516e1cf5bc0e29fbdafc4114e15b2653e3.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, die sich für eine infinitesimale Variation <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_dd6ea75acffc98757c15a07220d66a4274b853ed.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>  des Integrals <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_e952ab459cd0f634ce91e408f773cbd359665b1d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> ergibt, wenn dieses Integral stationär ist und die Variationsfunktion an Anfang und Ende Null ist, d.h. wenn gilt
 </p>
-
-<div id="outline-container-org532943b" class="outline-2">
-<h2 id="org532943b"><span class="section-number-2">1</span> Latex Fragments</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org3127eef" class="outline-3">
-<h3 id="org3127eef"><span class="section-number-3">1.1</span> nbrd equation environments</h3>
-<div class="outline-text-3" id="text-1-1">
 
 <div class="equation-container">
 <span class="equation">
-<object type="image/svg+xml" data="ltximg/testpost_be54e59b032ee9a9707574d58907f547fa942ab7.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_632e5de5aef4dfd3cada0e3c8c7a42038e37e96d.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </span>
 <span class="equation-label">
 1
 </span>
 </div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgdac621d" class="outline-2">
-<h2 id="orgdac621d"><span class="section-number-2">2</span> Graphics Rendering:</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-SVG Bear 1: absolute path
-PNG Bear: 
-</p>
-
-
-<div class="figure">
-<p><img src="assets/bear.png" alt="bear.png" />
-</p>
-</div>
 
 <p>
-PDF Bear: 
-<a href="assets/bear.pdf">assets/bear.pdf</a>
+Zunächst müssen wir uns jedoch mit der Variation vertraut machen. Unter einer Variation versteht man das Transformieren einer Ausgangsfunktion durch Addition einer infinitesimalen Variationsfunktion. Zum Beispiel ist
 </p>
-</div>
-</div>
-
-<div id="outline-container-orgd2d6912" class="outline-2">
-<h2 id="orgd2d6912"><span class="section-number-2">3</span> Export block (to latex)</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org5c6aafc" class="outline-3">
-<h3 id="org5c6aafc"><span class="section-number-3">3.1</span> Table</h3>
-<div class="outline-text-3" id="text-3-1">
-</div>
-</div>
-</div>
-
-<div id="outline-container-org4475997" class="outline-2">
-<h2 id="org4475997"><span class="section-number-2">4</span> Source block (to latex)</h2>
-<div class="outline-text-2" id="text-4">
-<div class="org-src-container">
-<pre class="src src-latex"><span style="color: #5EC4FF;">\begin</span>{<span style="color: #4db5bd;">equation</span>}
-<span style="color: #5EC4FF;">\begin</span><span style="color: #5EC4FF;">{</span><span style="color: #4db5bd;">alignat*</span><span style="color: #5EC4FF;">}{1}</span>
-<span style="color: #5EC4FF;">a </span><span style="color: #EBBF83;">&amp;</span><span style="color: #5EC4FF;">= b</span><span style="color: #EBBF83;">\\</span>
-<span style="color: #5EC4FF;">  </span><span style="color: #EBBF83;">&amp;</span><span style="color: #5EC4FF;">= c </span>
-<span style="color: #5EC4FF;">\end</span><span style="color: #5EC4FF;">{</span><span style="color: #4db5bd;">alignat*</span><span style="color: #5EC4FF;">}</span>
-<span style="color: #5EC4FF;">\end</span>{<span style="color: #4db5bd;">equation</span>}
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org089b6ac" class="outline-2">
-<h2 id="org089b6ac"><span class="section-number-2">5</span> Strategy</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-to save the fragments 
-to the right
-target file, change 
-prefix and dir in 
-org-format-latex (org.el)
-First, in org-html-format-latex (at preview) all the files are generated and written to the default directory. 
-For the export, they may be just written to another directory ?
-First, they generate absolute org-mode text links, before converting them to html links and writing the html links. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org31e8059" class="outline-2">
-<h2 id="org31e8059"><span class="section-number-2">6</span> Test</h2>
-<div class="outline-text-2" id="text-6">
-<p>
-<object type="image/svg+xml" data="ltximg/testpost_197a54b137c8bb7e1ba8df682d858914edd64301.svg" class="org-svg">
-Sorry, your browser does not support SVG.</object>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6204995" class="outline-2">
-<h2 id="org6204995"><span class="section-number-2">7</span> Equation 1</h2>
-<div class="outline-text-2" id="text-7">
 
 <div class="equation-container">
 <span class="equation">
-<object type="image/svg+xml" data="ltximg/testpost_e6aedfe470cab113a462998c70741ad02a913022.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_1d9dd071ca16600e4fcc090be6b8c3ab102b9cb0.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </span>
 <span class="equation-label">
 2
 </span>
 </div>
-</div>
-</div>
 
-<div id="outline-container-org62df9e6" class="outline-2">
-<h2 id="org62df9e6"><span class="section-number-2">8</span> edited</h2>
-<div class="outline-text-2" id="text-8">
 <p>
-from github
+die infinitesimale Variation, die auf <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b40fe2467ee817c4593b186577357ab39335fa40.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> addiert wird. Wenn so an der Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_90653c9199dc035a53aa510cb8ecee11f86aa497.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> "gerüttelt" wird, dann wird imiplizit an den Parametern, von denen die Funktion abhängt gerüttelt, d.h. jeder Parameter <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_80dc169d503994b138e9e8c4c8fc84e6e178d24f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_49c819926daa68e3a9923c18b542a0da32a36be5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> bekommt seine eigene Variation <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_3006ad672715418484bf2959404ac94cd6f37a5b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+Also gilt z.B. für <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_80dc169d503994b138e9e8c4c8fc84e6e178d24f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> mit <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_16608c9ca9c4d8555bbbab302dd2bcc2c6cf2594.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
 </p>
-</div>
-</div>
-
-
-
-<div id="outline-container-orgd63743f" class="outline-2">
-<h2 id="orgd63743f"><span class="section-number-2">9</span> Equation 2</h2>
-<div class="outline-text-2" id="text-9">
 
 <div class="equation-container">
 <span class="equation">
-<object type="image/svg+xml" data="ltximg/testpost_943a944498e50dde02dcededdef06b9542518f8a.svg" class="org-svg">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_2dc8c99d3b84e9bd5e386d624f6909c2f7ff20c8.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </span>
 <span class="equation-label">
 3
 </span>
 </div>
-</div>
-</div>
 
-<div id="outline-container-org7b05fee" class="outline-2">
-<h2 id="org7b05fee"><span class="section-number-2">10</span> plot</h2>
-<div class="outline-text-2" id="text-10">
-<div class="org-src-container">
-<pre class="src src-python"><span style="color: #5EC4FF;">import</span> matplotlib.pyplot <span style="color: #5EC4FF;">as</span> plt
-<span style="color: #5EC4FF;">import</span> numpy <span style="color: #5EC4FF;">as</span> np
-<span style="color: #9CAABB;">fig</span>, <span style="color: #9CAABB;">ax</span> = plt.subplots()
-<span style="color: #9CAABB;">x</span> = np.linspace(0.0, 10, num=50)
-ax.plot(np.sin(x))
-fig.tight_layout()
-<span style="color: #9CAABB;">filename</span> = <span style="color: #7FA0B7;">'myfig.svg'</span>
-fig.savefig(filename)
-filename
-</pre>
-</div>
-
-
-<div class="figure">
-<p><object type="image/svg+xml" data="myfig.svg" class="org-svg">
-Sorry, your browser does not support SVG.</object>
+<p>
+In dieser Form kann man damit noch recht wenig anfangen. Wir führen deshalb die folgende Taylorentwicklung aus ( $ &delta; x<sub>i</sub> $- Terme mit Ordnung größer oder gleich 2 verschwinden, das Quadrat einer infinitesimalen Zahl ist "so klein", dass diese Terme zu vernachlässigen sind) :
 </p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_3b060f1dcb96cbc575ba48b523ae661dcc3b32c4.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+4
+</span>
 </div>
+
+<p>
+Durch subtrahieren von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_90653c9199dc035a53aa510cb8ecee11f86aa497.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> auf beiden Seiten ergibt sich 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_798989c12c94ff12dc6118daed85029767cf09d7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+5
+</span>
 </div>
+
+<p>
+Hier sieht man die Analogie zum totalen Differenzial <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_1a8c3deed0ae016c149d16cc654a82dc7af0df73.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_7fc64a8e8bd0ce6c3dd43472c6e0069700d27095.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+6
+</span>
+</div>
+
+<p>
+Durch die Taylorentwicklung konnten wir also zeigen, dass 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_d65b629c1d4309872d875a64347f0d1f16f0b639.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+7
+</span>
+</div>
+
+<p>
+Damit ist ein wichtiger Schritt getan.
+Machen wir weiter mit der  Variation des Integrals: 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_4636d532fb1949c7003696f2e95f561e07738030.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+8
+</span>
+</div>
+<p>
+Den 2. Summanden integrieren wir separat. Zur Erinnerung: <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b8d53544c4d8fbe54a5c07de7c3a5ce3e9872a58.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> . Daher gilt dies auch für die Parameter <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_6bfbec856214b6b9c19f351c426db682036cff7f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> und <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_ef410eef9c60a709693a4d089019aa60906ed310.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, die beide potentiell von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_9f7619b143e018a8454c83d80937f4a6435552e5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> abhängig sein können.   
+Partielle Integration des 2. Summanden: 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_0f329c3dadfd4e9dccb1469a5e78ef490ef387d0.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+9
+</span>
+</div>
+<p>
+Der rechte Term sieht schon stark nach Euler-Lagrange Gleichung aus.
+Zurück zum Variationsintegral: durch Einsetzen ergibt sich
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_efb1eb9e8293a2da2bfb1d2c26fc89f2791252cb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+10
+</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b9f2bb313fb0dc3578f6ea7654020470c3e1d0cf.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> und <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_bd5c8518dda30d5bcf6adaa2b3af258a841a465d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> sind beliebig, d.h., damit diese Gleichung erfüllt ist, muss auf jeden Fall der erste Summand gleich Null sein, was die Euler-Lagrange-Gleichung liefert.
+Typische Anwendungen der Euler-Lagrange-Gleichungen sind Probleme in der Mechanik. Dort gilt der Energieerhaltungssatz, wobei die Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_d07cef0bbb601059f6024efea5827f8a08c1e803.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> die Lagrangefunktion, also die Differenz der kinetischen minus der potentiellen Energie, ist. Wenn die Energie sich zeitlich nicht ändert, also erhalten ist und
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_12bc46da0a4c7a76e7328b27e8308a3702cdb6d7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+11
+</span>
+</div>
+
+<p>
+dann würde sogar der zweite Summand im Integral wegfallen.
+In jedem Fall gilt die Euler-Lagrange Gleichung:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_db9b6129718d5cd1b1eb50ca8d29f406019f95b8.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">
+12
+</span>
 </div>
 
 </div></body></html>
