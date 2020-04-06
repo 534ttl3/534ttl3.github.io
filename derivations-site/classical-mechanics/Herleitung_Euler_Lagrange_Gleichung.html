@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+
+/* font-family: "Computer Modern Serif", serif, "Computer Modern Sans", sans-serif; */ /* I find that on the web, inconsistencies of math typesetting and the use of computer modern distracts from the content */
+
+  }
+
+  .slidingtopbar {
+
+  }
+
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+        width: 800px;
+	}
+}
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.aboutlink {
+    border-bottom: 5px solid aquamarine;
+    float: right;
+}
+
+.projectlink, .aboutlink {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.projectlink {
+    float: left;
+}
+
+.aboutlink {
+    float: right;
+}
+
+.projectlink:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutlink {
+    text-align: center;
+    float: none;
+    border-bottom: none;
+    border-top: 5px solid aquamarine;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+.projectlink {
+    border-top: 5px solid cornflowerblue;
+}
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+
+/* ---- minimal-style code blocks ---- */
+
+pre.src {
+width: auto;
+overflow: visible;
+font-family: Courier;
+font-size: 10.5pt;
+}
+
+.org-src-container {
+background-color: rgba(255, 255, 255, 0.9);
+border-left: 2px solid black;
+padding-left: 15px;padding-right: 15px;
+color: black;
+font-family: "Courier New", Courier, monospace;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container-div{
+    background: whitesmoke;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-right: 5px solid cornflowerblue;
+}
+
+/* ---- prettier footnotes prettier ---- */
+
+.footpara {
+    width: 99%;
+    text-alignt: left;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.footdef {
+    /* line-height: 3em; */
+    padding-bottom: 30px;
+}
+
+
+/* --- math display --- */
+
+p > .org-svg {  /* export with dvisvgm: position adjustment of inline math */
+    vertical-align: middle;
+}
+
+p > img {
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; } /* for export with dvisvgm */
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar"><a  class="projectlink" href="../index.html">derivations-site</a>
+<a  class="projectlink"  href="../sitemap.html">Sitemap</a>
+<a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/classical-mechanics/Herleitung_Euler_Lagrange_Gleichung.org">Edit on Github</a>
+<a  class="aboutlink"  href="../about.html">About</a>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Herleitung der Euler-Lagrange Gleichung (Lagrange-Gleichung 2. Art)</h1>
+<p>
+Die Euler-Lagrange-Gleichung ist eine Differentialgleichung 2. Grades einer Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_7ae917516e1cf5bc0e29fbdafc4114e15b2653e3.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, die sich für eine infinitesimale Variation <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_dd6ea75acffc98757c15a07220d66a4274b853ed.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>  des Integrals <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_e952ab459cd0f634ce91e408f773cbd359665b1d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> ergibt, wenn dieses Integral stationär ist und die Variationsfunktion an Anfang und Ende Null ist, d.h. wenn gilt
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_632e5de5aef4dfd3cada0e3c8c7a42038e37e96d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(1)</span>
+</div>
+
+<p>
+Zunächst müssen wir uns jedoch mit der Variation vertraut machen. Unter einer Variation versteht man das Transformieren einer Ausgangsfunktion durch Addition einer infinitesimalen Variationsfunktion. Zum Beispiel ist
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_1d9dd071ca16600e4fcc090be6b8c3ab102b9cb0.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(2)</span>
+</div>
+
+<p>
+die infinitesimale Variation, die auf <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b40fe2467ee817c4593b186577357ab39335fa40.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> addiert wird. Wenn so an der Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_90653c9199dc035a53aa510cb8ecee11f86aa497.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> "gerüttelt" wird, dann wird imiplizit an den Parametern, von denen die Funktion abhängt gerüttelt, d.h. jeder Parameter <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_80dc169d503994b138e9e8c4c8fc84e6e178d24f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_49c819926daa68e3a9923c18b542a0da32a36be5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> bekommt seine eigene Variation <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_3006ad672715418484bf2959404ac94cd6f37a5b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+Also gilt z.B. für <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_80dc169d503994b138e9e8c4c8fc84e6e178d24f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> mit <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_16608c9ca9c4d8555bbbab302dd2bcc2c6cf2594.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_2dc8c99d3b84e9bd5e386d624f6909c2f7ff20c8.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(3)</span>
+</div>
+
+<p>
+In dieser Form kann man damit noch recht wenig anfangen. Wir führen deshalb die folgende Taylorentwicklung aus ( $ &delta; x<sub>i</sub> $- Terme mit Ordnung größer oder gleich 2 verschwinden, das Quadrat einer infinitesimalen Zahl ist "so klein", dass diese Terme zu vernachlässigen sind) :
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_3b060f1dcb96cbc575ba48b523ae661dcc3b32c4.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(4)</span>
+</div>
+
+<p>
+Durch subtrahieren von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_90653c9199dc035a53aa510cb8ecee11f86aa497.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> auf beiden Seiten ergibt sich 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_798989c12c94ff12dc6118daed85029767cf09d7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(5)</span>
+</div>
+
+<p>
+Hier sieht man die Analogie zum totalen Differenzial <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_1a8c3deed0ae016c149d16cc654a82dc7af0df73.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> :
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_7fc64a8e8bd0ce6c3dd43472c6e0069700d27095.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(6)</span>
+</div>
+
+<p>
+Durch die Taylorentwicklung konnten wir also zeigen, dass 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_d65b629c1d4309872d875a64347f0d1f16f0b639.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(7)</span>
+</div>
+
+<p>
+Damit ist ein wichtiger Schritt getan.
+Machen wir weiter mit der  Variation des Integrals: 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_4636d532fb1949c7003696f2e95f561e07738030.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(8)</span>
+</div>
+<p>
+Den 2. Summanden integrieren wir separat. Zur Erinnerung: <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b8d53544c4d8fbe54a5c07de7c3a5ce3e9872a58.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> . Daher gilt dies auch für die Parameter <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_6bfbec856214b6b9c19f351c426db682036cff7f.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> und <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_ef410eef9c60a709693a4d089019aa60906ed310.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, die beide potentiell von <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_9f7619b143e018a8454c83d80937f4a6435552e5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> abhängig sein können.   
+Partielle Integration des 2. Summanden: 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_0f329c3dadfd4e9dccb1469a5e78ef490ef387d0.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(9)</span>
+</div>
+<p>
+Der rechte Term sieht schon stark nach Euler-Lagrange Gleichung aus.
+Zurück zum Variationsintegral: durch Einsetzen ergibt sich
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_efb1eb9e8293a2da2bfb1d2c26fc89f2791252cb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(10)</span>
+</div>
+
+<p>
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_b9f2bb313fb0dc3578f6ea7654020470c3e1d0cf.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> und <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_bd5c8518dda30d5bcf6adaa2b3af258a841a465d.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> sind beliebig, d.h., damit diese Gleichung erfüllt ist, muss auf jeden Fall der erste Summand gleich Null sein, was die Euler-Lagrange-Gleichung liefert.
+Typische Anwendungen der Euler-Lagrange-Gleichungen sind Probleme in der Mechanik. Dort gilt der Energieerhaltungssatz, wobei die Funktion <object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_d07cef0bbb601059f6024efea5827f8a08c1e803.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> die Lagrangefunktion, also die Differenz der kinetischen minus der potentiellen Energie, ist. Wenn die Energie sich zeitlich nicht ändert, also erhalten ist und
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_12bc46da0a4c7a76e7328b27e8308a3702cdb6d7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(11)</span>
+</div>
+
+<p>
+dann würde sogar der zweite Summand im Integral wegfallen.
+In jedem Fall gilt die Euler-Lagrange Gleichung:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/Herleitung_Euler_Lagrange_Gleichung_db9b6129718d5cd1b1eb50ca8d29f406019f95b8.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(12)</span>
+</div>
+
+</div>
+</body>
+</html>

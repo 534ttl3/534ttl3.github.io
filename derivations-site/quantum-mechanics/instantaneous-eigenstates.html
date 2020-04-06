@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+
+/* font-family: "Computer Modern Serif", serif, "Computer Modern Sans", sans-serif; */ /* I find that on the web, inconsistencies of math typesetting and the use of computer modern distracts from the content */
+
+  }
+
+  .slidingtopbar {
+
+  }
+
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+        width: 800px;
+	}
+}
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.aboutlink {
+    border-bottom: 5px solid aquamarine;
+    float: right;
+}
+
+.projectlink, .aboutlink {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.projectlink {
+    float: left;
+}
+
+.aboutlink {
+    float: right;
+}
+
+.projectlink:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutlink {
+    text-align: center;
+    float: none;
+    border-bottom: none;
+    border-top: 5px solid aquamarine;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+.projectlink {
+    border-top: 5px solid cornflowerblue;
+}
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+
+/* ---- minimal-style code blocks ---- */
+
+pre.src {
+width: auto;
+overflow: visible;
+font-family: Courier;
+font-size: 10.5pt;
+}
+
+.org-src-container {
+background-color: rgba(255, 255, 255, 0.9);
+border-left: 2px solid black;
+padding-left: 15px;padding-right: 15px;
+color: black;
+font-family: "Courier New", Courier, monospace;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container-div{
+    background: whitesmoke;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-right: 5px solid cornflowerblue;
+}
+
+/* ---- prettier footnotes prettier ---- */
+
+.footpara {
+    width: 99%;
+    text-alignt: left;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.footdef {
+    /* line-height: 3em; */
+    padding-bottom: 30px;
+}
+
+
+/* --- math display --- */
+
+p > .org-svg {  /* export with dvisvgm: position adjustment of inline math */
+    vertical-align: middle;
+}
+
+p > img {
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; } /* for export with dvisvgm */
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar"><a  class="projectlink" href="../index.html">derivations-site</a>
+<a  class="projectlink"  href="../sitemap.html">Sitemap</a>
+<a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/quantum-mechanics/instantaneous-eigenstates.org">Edit on Github</a>
+<a  class="aboutlink"  href="../about.html">About</a>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Instantaneous Eigenstates and Adiabatic approximation</h1>
+<span class="posted">2020-03-29</span>
+<p>
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_fd6b932b1fd9a3dfbe4a734c0014b5ebc10bfce3.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+
+<div id="outline-container-org6a0dd34" class="outline-2">
+<h2 id="org6a0dd34"><span class="section-number-2">1</span> Finding an <i>instantanenous eigenstate</i> analytically?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://youtu.be/0AM6arPSszI?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=612">Here</a><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, it is proposed<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> that the SEQ
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_4f091d6adc490bf7790298aa631bc3cb1650152b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(1)</span>
+</div>
+
+<p>
+has analytic solutions: if <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_20f1a59f7a0b6dfe103d027d113c9462c5909838.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> is varying <i>slowly</i> (what that means exactly is explained there), the system will stay in it's time-dependent
+eigenstate (i.e. <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_b14c01c22f3c131a4ebd6c81eef2d1ffedfeda29.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>), if it was at <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_dfa4de604675cb02d14b29fe22e5e88b877b838a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> already in that state. 
+</p>
+
+
+<div class="figure">
+<p><img src="instantaneous-eigenstates/assets/instantaneous-eigenstates.org_20200329_144601_YUcYpd.png" alt="instantaneous-eigenstates.org_20200329_144601_YUcYpd.png" width="100%" />
+</p>
+</div>
+
+<p>
+<b>This claim is only justified in a narrow situation!</b>: if from the beginning of the time evolution, there is <i>no</i> contribution of all the other energy eigenstates, i.e. their time-dependent coefficient <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_444f618a42ee5038c15cd8ba590a600313ba89a1.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> in the more <a href="https://youtu.be/Kk7cc15gWF8?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=308">general (encompassing more information) wavefunction ansatz</a> 
+</p>
+
+
+
+<div id="org2c0dcdd" class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_d03b7df0868d9809f1489070601a02f74d572772.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(2)</span>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org569a221" class="outline-2">
+<h2 id="org569a221"><span class="section-number-2">2</span> More general approach: Here you see what is the condition of the adiabatic approximation!</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A differential equation for each individual <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_c3a4710816570edf64818cdae1db8a08a61d295a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> can be derived from the more general ansatz <a href="#org2c0dcdd">2</a> by inserting it into the SEQ and then projecting a <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ae0e4829e76de2f2f96d5af778cea4b7213fe19b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> from the left. 
+</p>
+
+<p>
+It holds then (see <a href="https://youtu.be/Kk7cc15gWF8?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=386">MIT OCW</a>)
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_80988d0bd96133a130c6a0c1827434575d580432.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(3)</span>
+</div>
+
+<p>
+only if the coupling/mixing term is zero, the wavefunction will remain proportional only to <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ae5446d5cc6a7f3855833744b9247cfed4de2c8a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>. 
+</p>
+
+<p>
+We said that the system would remain in it's initial energy eigenstate, if <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_20f1a59f7a0b6dfe103d027d113c9462c5909838.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> is changing slowly. The coupling terms <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_9fdc3e59dbb4d159d8690a26ec3c15746af21897.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> can be evaluated using the instantaneous-eigenstate SEQ. <a href="https://www.youtube.com/watch?v=Tcv3_Gk1Ysg&amp;list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;index=67">It holds</a> (after differentiating the instantaneous eigenstate SEQ and then projecting with <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_2bf0d54b71c8452ea78ec13bae4c5412f1d8f269.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> from the left)
+</p>
+
+
+<div id="orge2018a5" class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_9020ed47adde197675eaf8d68bf67e09b0b3dbd7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(4)</span>
+</div>
+
+<p>
+which means that if the time dependence of the hamiltonian is adiabatic (slowly varying <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_20f1a59f7a0b6dfe103d027d113c9462c5909838.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>), the coupling terms will be small and the system will (given that it is prepared in an eigenstate at <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_dfa4de604675cb02d14b29fe22e5e88b877b838a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) remain in it's initial instantaneous eigenstate, i.e.: 
+</p>
+
+<p>
+If <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_eca829478ded239a4b79cdca7165d2d18be79b54.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> is prepared in exactly one eigenstate and for <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_fbb89147e4c2230fd2d3771f6648be7b85070869.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>:  
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_fe7d7b1f28bc8c8bb69eb5ccfe77da22a1a0c1eb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(5)</span>
+</div>
+<p>
+i.e. if 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_a22a698ad650b01cd0499bd78a6783be444102e5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(6)</span>
+</div>
+
+<p>
+and <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_29e0e5d48d1acc94d51d397bfaf7bedf220d94a7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> (&rarr; <b>adiabatic condition does not hold for level crossings</b>), then <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_b38a09073730f64976b7257af4c1a0cdb8b3a41c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> .
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0b2b951" class="outline-2">
+<h2 id="org0b2b951"><span class="section-number-2">3</span> Transition between two instantaneous energy eigenstates</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+i.e. evolution of the total wave function with <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_849f2f4520c281eb7746407a98580f1e6287883c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> and <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ed205f21248b8528d499b04b7d416be9d9794ecb.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> under a time-dependent two-level system hamiltonian 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ce664e5dcda0906f1b67af36e1b6b236d35db2fe.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(7)</span>
+</div>
+<p>
+plus an additional term introducing off-diagonal terms into the hamiltonian 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_84f36c4f8f74098e04c4cd9cdd8d1287913ff8d3.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(8)</span>
+</div>
+<p>
+(like a coupling term of <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_d0e4391f1773d8e69d1ae73f53747b62b92f3b66.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) which makes the following process happen: 
+</p>
+<ul class="org-ul">
+<li>initial state:</li>
+</ul>
+
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_bc10274527ea45ceeb199cc4d2ef735ee2cbeb2c.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(9)</span>
+</div>
+
+<ul class="org-ul">
+<li><p>
+contribution of the coupling term: 
+around <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_7ac4a25d85a505c1ac98982a3bb1ad8f720f365a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> the coupling term <a href="#orge2018a5">4</a> contributes. 
+</p>
+
+<p>
+The instantaneous eigenenergies of the coupled system can be <a href="https://en.wikipedia.org/wiki/Avoided_crossing#In_two-state_systems">easily solved exactly</a>. Their shape can also be motivated by joining up the asymptotic eigenenergies and the eigenenergies at <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_47e126c702959e8449b6e329cf5549f4406dc8b8.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>. Now, these <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_4bb14c6b420e151b1063b5e5943212b50dd619f5.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> do not cross, which means there is a good chance that they could fulfill the adiabatic condition. (if it is fulfilled depends on the dimensions of the box drawn in the figure, i.e. on the off-diagonal elements (more specifically <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_e334117b786dacd1faebb7b4bd126901587d53c2.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>) and the coupling time scale <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ac2b51f2e57be8d21f363d0d50db4f55131042ac.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>, which is elaborated on <a href="https://youtu.be/FIef9sP-Yq8?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=746">here</a>.)
+</p></li>
+
+<li>coupled system's instantaneous eigenstate evolves further and approaches asymptotically the instantaneous eigenstate of the uncoupled system which is orthogonal to the initial instantaneous eigenstate (adiabatic transition).</li>
+</ul>
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_d7d3a5cfabe884c058adfdbeca72570c197a8053.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(10)</span>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9945d13" class="outline-2">
+<h2 id="org9945d13"><span class="section-number-2">4</span> Pay attention to your language</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>If you say <i>adiabatic evolution</i> you mean that the coupled system stays in it's initial instantaneous eigenstate.</li>
+<li>If you say <i>adiabatic transition</i> you still mean that the coupled system stays in it's initial instantaneous eigenstate, so those <b>instantaneous eigenstates do not <i>switch</i>, <i>cross</i> or <i>transition</i> if the evolution is adiabatic</b>. They much rather facilitate in their adiabatic evolution a total wave function that before and after the coupling takes place approaches asymptotically two different instantaneous eigenstates of the <i>uncoupled</i> system.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ec9f47" class="outline-2">
+<h2 id="org3ec9f47"><span class="section-number-2">5</span> Resources</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Adiabatic_theorem#Avoided_curve_crossing">Adiabatic theorem - Wikipedia, Avoided level crossing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Avoided_crossing#In_two-state_systems">Avoided Crossing - Wikipedia</a></li>
+<li><a href="https://youtu.be/FIef9sP-Yq8?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=710">MIT OCW lecture</a></li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+This video provides information: <a href="https://youtu.be/0AM6arPSszI?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=295">https://youtu.be/0AM6arPSszI?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=295</a> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Example
+</p></div></div>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

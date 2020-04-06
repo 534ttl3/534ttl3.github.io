@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+
+/* font-family: "Computer Modern Serif", serif, "Computer Modern Sans", sans-serif; */ /* I find that on the web, inconsistencies of math typesetting and the use of computer modern distracts from the content */
+
+  }
+
+  .slidingtopbar {
+
+  }
+
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+        width: 800px;
+	}
+}
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.aboutlink {
+    border-bottom: 5px solid aquamarine;
+    float: right;
+}
+
+.projectlink, .aboutlink {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.projectlink {
+    float: left;
+}
+
+.aboutlink {
+    float: right;
+}
+
+.projectlink:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutlink {
+    text-align: center;
+    float: none;
+    border-bottom: none;
+    border-top: 5px solid aquamarine;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+.projectlink {
+    border-top: 5px solid cornflowerblue;
+}
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+
+/* ---- minimal-style code blocks ---- */
+
+pre.src {
+width: auto;
+overflow: visible;
+font-family: Courier;
+font-size: 10.5pt;
+}
+
+.org-src-container {
+background-color: rgba(255, 255, 255, 0.9);
+border-left: 2px solid black;
+padding-left: 15px;padding-right: 15px;
+color: black;
+font-family: "Courier New", Courier, monospace;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container-div{
+    background: whitesmoke;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-right: 5px solid cornflowerblue;
+}
+
+/* ---- prettier footnotes prettier ---- */
+
+.footpara {
+    width: 99%;
+    text-alignt: left;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.footdef {
+    /* line-height: 3em; */
+    padding-bottom: 30px;
+}
+
+
+/* --- math display --- */
+
+p > .org-svg {  /* export with dvisvgm: position adjustment of inline math */
+    vertical-align: middle;
+}
+
+p > img {
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; } /* for export with dvisvgm */
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar"><a  class="projectlink" href="./index.html">derivations-site</a>
+<a  class="projectlink"  href="./sitemap.html">Sitemap</a>
+<a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/about.org">Edit on Github</a>
+<a  class="aboutlink"  href="./about.html">About</a>
+</div>
+</div>
+<div id="content">
+<h1 class="title">About</h1>
+On this blog, I intend to post things wich either
+<br></br>
+- are just interesting to me
+<br></br>
+or
+<br></br>
+- which I will have to be able to explain in a coherent way in the future, but can't bring myself to work on unless I can also share that work somewhere.
+<br></br>
+Be it for good, or ill.
+<br></br><br></br><hr></hr>Check out <a href="https://534ttl3.github.io/">other blogs</a>.<br></br>For general and legal information, please look <a href="https://534ttl3.github.io/www/legal.html">here</a>.
+
+</div>
+</body>
+</html>

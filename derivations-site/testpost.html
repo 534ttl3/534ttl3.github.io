@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+
+/* font-family: "Computer Modern Serif", serif, "Computer Modern Sans", sans-serif; */ /* I find that on the web, inconsistencies of math typesetting and the use of computer modern distracts from the content */
+
+  }
+
+  .slidingtopbar {
+
+  }
+
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+        width: 800px;
+	}
+}
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.aboutlink {
+    border-bottom: 5px solid aquamarine;
+    float: right;
+}
+
+.projectlink, .aboutlink {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.projectlink {
+    float: left;
+}
+
+.aboutlink {
+    float: right;
+}
+
+.projectlink:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutlink {
+    text-align: center;
+    float: none;
+    border-bottom: none;
+    border-top: 5px solid aquamarine;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+.projectlink {
+    border-top: 5px solid cornflowerblue;
+}
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+
+/* ---- minimal-style code blocks ---- */
+
+pre.src {
+width: auto;
+overflow: visible;
+font-family: Courier;
+font-size: 10.5pt;
+}
+
+.org-src-container {
+background-color: rgba(255, 255, 255, 0.9);
+border-left: 2px solid black;
+padding-left: 15px;padding-right: 15px;
+color: black;
+font-family: "Courier New", Courier, monospace;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container-div{
+    background: whitesmoke;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-right: 5px solid cornflowerblue;
+}
+
+/* ---- prettier footnotes prettier ---- */
+
+.footpara {
+    width: 99%;
+    text-alignt: left;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.footdef {
+    /* line-height: 3em; */
+    padding-bottom: 30px;
+}
+
+
+/* --- math display --- */
+
+p > .org-svg {  /* export with dvisvgm: position adjustment of inline math */
+    vertical-align: middle;
+}
+
+p > img {
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; } /* for export with dvisvgm */
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar"><a  class="projectlink" href="./index.html">derivations-site</a>
+<a  class="projectlink"  href="./sitemap.html">Sitemap</a>
+<a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/testpost.org">Edit on Github</a>
+<a  class="aboutlink"  href="./about.html">About</a>
+</div>
+</div>
+<div id="content">
+<h1 class="title">I'm in the Mood for Org</h1>
+<span class="posted">2020-03-26</span>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgde9d37f">1. Latex Fragments</a>
+<ul>
+<li><a href="#org5dc0dd4">1.1. nbrd equation environments</a></li>
+</ul>
+</li>
+<li><a href="#orge7ada36">2. Graphics Rendering:</a></li>
+<li><a href="#org05e2366">3. Export block (to latex)</a>
+<ul>
+<li><a href="#org8ed602f">3.1. Table</a></li>
+</ul>
+</li>
+<li><a href="#org9ed8b1c">4. Source block (to latex)</a></li>
+<li><a href="#org0db1f7b">5. Strategy</a></li>
+<li><a href="#org49db7eb">6. Test</a></li>
+<li><a href="#org6c9d3a6">7. Equation 1</a></li>
+<li><a href="#org7056bc6">8. edited</a></li>
+<li><a href="#org8917282">9. Equation 2</a></li>
+<li><a href="#org9d0158a">10. plot</a></li>
+</ul>
+</div>
+</div>
+<p>
+Hello
+This is a citation: <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<div id="outline-container-orgde9d37f" class="outline-2">
+<h2 id="orgde9d37f"><span class="section-number-2">1</span> Latex Fragments</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org5dc0dd4" class="outline-3">
+<h3 id="org5dc0dd4"><span class="section-number-3">1.1</span> nbrd equation environments</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_be54e59b032ee9a9707574d58907f547fa942ab7.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(1)</span>
+</div>
+
+<p>
+Some text in between
+</p>
+
+<div id="org71faaf5" class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_f8c5298420b07fe8be9e30391e640d77ba62e061.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(2)</span>
+</div>
+
+<p>
+And this is an equation <a href="#org71faaf5">2</a>
+</p>
+
+<p>
+Some code: 
+</p>
+<div class="org-src-container">
+<pre class="src src-shell-script" id="org52e1c82">echo hello world 
+</pre>
+</div>
+<p>
+<a href="#org52e1c82">1</a> is a reference to src block
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge7ada36" class="outline-2">
+<h2 id="orge7ada36"><span class="section-number-2">2</span> Graphics Rendering:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+SVG Bear 1: absolute path
+PNG Bear: 
+</p>
+
+
+<div class="figure">
+<p><img src="assets/bear.png" alt="bear.png" />
+</p>
+</div>
+
+<p>
+PDF Bear: 
+<a href="assets/bear.pdf">assets/bear.pdf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05e2366" class="outline-2">
+<h2 id="org05e2366"><span class="section-number-2">3</span> Export block (to latex)</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8ed602f" class="outline-3">
+<h3 id="org8ed602f"><span class="section-number-3">3.1</span> Table</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ed8b1c" class="outline-2">
+<h2 id="org9ed8b1c"><span class="section-number-2">4</span> Source block (to latex)</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-latex">\begin{equation}
+\begin{alignat*}{1}
+a &amp;= b\\
+  &amp;= c 
+\end{alignat*}
+\end{equation}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0db1f7b" class="outline-2">
+<h2 id="org0db1f7b"><span class="section-number-2">5</span> Strategy</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+to save the fragments 
+to the right
+target file, change 
+prefix and dir in 
+org-format-latex (org.el)
+First, in org-html-format-latex (at preview) all the files are generated and written to the default directory. 
+For the export, they may be just written to another directory ?
+First, they generate absolute org-mode text links, before converting them to html links and writing the html links. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49db7eb" class="outline-2">
+<h2 id="org49db7eb"><span class="section-number-2">6</span> Test</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Hey There <object type="image/svg+xml" data="ltximg/testpost_197a54b137c8bb7e1ba8df682d858914edd64301.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> and there
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c9d3a6" class="outline-2">
+<h2 id="org6c9d3a6"><span class="section-number-2">7</span> Equation 1</h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_e6aedfe470cab113a462998c70741ad02a913022.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(3)</span>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7056bc6" class="outline-2">
+<h2 id="org7056bc6"><span class="section-number-2">8</span> edited</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+from github
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8917282" class="outline-2">
+<h2 id="org8917282"><span class="section-number-2">9</span> Equation 2</h2>
+<div class="outline-text-2" id="text-9">
+
+<div class="equation-container">
+<span class="equation">
+<object type="image/svg+xml" data="ltximg/testpost_943a944498e50dde02dcededdef06b9542518f8a.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</span>
+<span class="equation-label">(4)</span>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d0158a" class="outline-2">
+<h2 id="org9d0158a"><span class="section-number-2">10</span> plot</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-python">import matplotlib.pyplot as plt
+import numpy as np
+fig, ax = plt.subplots()
+x = np.linspace(0.0, 10, num=50)
+ax.plot(np.sin(x))
+fig.tight_layout()
+filename = 'myfig.svg'
+fig.savefig(filename)
+filename
+</pre>
+</div>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="myfig.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Sakurai, J. J, 2011, <i>Modern quantum mechanics</i> 
+</p></div></div>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
