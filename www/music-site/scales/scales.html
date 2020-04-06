@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style type="text/css">
+  body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      margin: 0px;
+  }
+
+  #content {
+      padding: 5px;
+
+/* font-family: "Computer Modern Serif", serif, "Computer Modern Sans", sans-serif; */ /* I find that on the web, inconsistencies of math typesetting and the use of computer modern distracts from the content */
+
+  }
+
+  .slidingtopbar {
+
+  }
+
+
+/* 2: min-width */
+@media screen and (min-width: 800px) {
+	#content {
+        margin: auto;
+        width: 775px;
+	}
+
+    .slidingtopbar {
+        margin: auto;
+        width: 800px;
+	}
+}
+
+.topbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.aboutlink {
+    border-bottom: 5px solid aquamarine;
+    float: right;
+}
+
+.projectlink, .aboutlink {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.projectlink {
+    float: left;
+}
+
+.aboutlink {
+    float: right;
+}
+
+.projectlink:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+.topbar a:hover:not(.active){
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutlink {
+    text-align: center;
+    float: none;
+    border-bottom: none;
+    border-top: 5px solid aquamarine;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+  }
+}
+
+.projectlink {
+    border-top: 5px solid cornflowerblue;
+}
+
+.posted, .lastedited{
+color: #646769;
+font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+font-size: .75em;
+margin-right: 1em;
+}
+
+.post-container-div {
+border-left: 5px solid cornflowerblue;
+padding-left: 25px;
+padding-top: 5px;
+padding-bottom: 10px;
+border-right: 5px solid cornflowerblue;
+background: aliceblue;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+
+/* ---- minimal-style code blocks ---- */
+
+pre.src {
+width: auto;
+overflow: visible;
+font-family: Courier;
+font-size: 10.5pt;
+}
+
+.org-src-container {
+background-color: rgba(255, 255, 255, 0.9);
+border-left: 2px solid black;
+padding-left: 15px;padding-right: 15px;
+color: black;
+font-family: "Courier New", Courier, monospace;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.project-container-div{
+    background: whitesmoke;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-right: 5px solid cornflowerblue;
+}
+
+/* ---- prettier footnotes prettier ---- */
+
+.footpara {
+    width: 99%;
+    text-alignt: left;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.footdef {
+    /* line-height: 3em; */
+    padding-bottom: 30px;
+}
+
+
+/* --- math display --- */
+
+p > .org-svg {  /* export with dvisvgm: position adjustment of inline math */
+    vertical-align: middle;
+}
+
+p > img {
+    vertical-align: middle;
+}
+
+.org-svg { width: auto; } /* for export with dvisvgm */
+
+.equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="slidingtopbar"><a  class="projectlink" href="../index.html">Music</a>
+<a  class="projectlink"  href="../sitemap.html">Sitemap</a>
+<a  class="projectlink"  href="https://github.com/534ttl3/music-site/./blob/master/org/scales/scales.org">Edit on Github</a>
+<a  class="aboutlink"  href="../about.html">About</a>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Scales and Choice cords</h1>
+<span class="posted">2018-01-12</span>
+<div id="outline-container-orgea983a5" class="outline-2">
+<h2 id="orgea983a5"><span class="section-number-2">1</span> Fitting chords for certain scales: a table</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This table contains some of the standard choice chords for different scales. It is inspired by the first few chapters of <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./scales/assets/printTabelle.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org06fe850" class="outline-2">
+<h2 id="org06fe850"><span class="section-number-2">2</span> Extending this table</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+To generate/modify/extend this table, please feel free to use it's latex code: 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-latex">\begin{tabular}{l  l  l  | c |  c |  c |  c |  c |  c |  c |  c |  c  | c  |  c  |  c  |  c  | c  r l l l}
+                                           &amp;                              &amp; \quad \quad \quad \quad                    &amp;                             &amp; \multicolumn{3}{c}{ $\begin{smallmatrix} \text{9th(2nd)} \\ \textsl{(diat.)} \\ \swarrow\downarrow\searrow \end{smallmatrix}$ } &amp; \multicolumn{}{c}{ $\begin{smallmatrix} \text{11th(4th)} \\ \textsl{(diat.)} \\ \swarrow\downarrow\searrow \end{smallmatrix}$  } &amp; $\begin{smallmatrix} \text{5th} \\ \textsl{(diat.)} \\ \swarrow\downarrow\searrow \end{smallmatrix}$ &amp; \multicolumn{3}{c}{  $\begin{smallmatrix} \text{13th(6th)} \\ \textsl{(diat.)} \\ \swarrow\downarrow\searrow \end{smallmatrix}$ } &amp;                            &amp;                                            &amp;              &amp;                                           &amp; \\
+                                           &amp;                              &amp; \textbf{Intervals} \quad \quad \quad \quad &amp; P1                          &amp; m2                                                                                                                              &amp; M2                                                                                                                               &amp; m3                                                                                                   &amp; M3                                                                                                                                &amp; P4                         &amp; TT                                         &amp; P5           &amp; m6                                        &amp; M6                          &amp; m7                       &amp; M7                    &amp; P8 &amp;  &amp;                                              &amp; 1st-c                              &amp; b-f      &amp; slash \\
+    \cmidrule[1.2pt]{3-19}
+        \ldelim\{{20}{10mm}[hept.] &amp; \ldelim\{{10}{15mm}[Major]   &amp; Ionian                                     &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}_{\Delta}$                                                                                                             &amp; (X)                        &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp;                          &amp; $\textbf{X}_{\Delta}$ &amp; X  &amp;  &amp; I                                            &amp; $\Delta$                           &amp; \same    &amp; \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Dorian                                     &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp; $\textbf{X}_{-}$                                                                                     &amp;                                                                                                                                   &amp; X                          &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp; $\textbf{X}_{-7}$        &amp;                       &amp; X  &amp;  &amp; II                                           &amp; -7                                 &amp; \same    &amp; +m3/root \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Phrygian                                   &amp; X                           &amp; \cellcolor{Gray1} $\textbf{X}_{\flat 9}$                                                                                        &amp;                                                                                                                                  &amp; X                                                                                                    &amp;                                                                                                                                   &amp; $\textbf{X}_{\text{sus4}}$ &amp;                                            &amp; $\textbf{X}$ &amp; X                                         &amp;                             &amp; \textbf{X}               &amp;                       &amp; X  &amp;  &amp; III                                          &amp; $\text{sus}^{\flat 9}$             &amp; -7       &amp; +m2/root \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Lydian                                     &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}_{\Delta}$                                                                                                             &amp;                            &amp; \cellcolor{Gray} $\textbf{X}_{\sharp 4}$   &amp; X            &amp;                                           &amp; X                           &amp;                          &amp; $\textbf{X}_{\Delta}$ &amp; X  &amp;  &amp; IV                                           &amp; $\Delta^{\sharp 4}$                &amp; $\Delta$ &amp; +M2/root  \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Mixolydian                                 &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}$                                                                                                                      &amp; (X)                        &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp; $\textbf{X}_{7}$         &amp;                       &amp; X  &amp;  &amp; V                                            &amp; 7                                  &amp; \same    &amp; -M2/root \\
+                                           &amp;                              &amp;                                            &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; X                                                                                                                                 &amp; $\textbf{X}_{\text{sus4}}$ &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp; X                        &amp;                       &amp; X  &amp;  &amp; V                                            &amp; sus                                &amp; 7        &amp; \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Aeolian                                    &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp; $\textbf{X}_{-}$                                                                                     &amp;                                                                                                                                   &amp; X                          &amp;                                            &amp; X            &amp; \cellcolor{Gray5} $\textbf{X}_{\flat 6}$  &amp;                             &amp; X                        &amp;                       &amp; X  &amp;  &amp; VI                                           &amp; -${}^{\flat 6}$                    &amp; -7       &amp; \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Locrian                                    &amp; X                           &amp; (X)                                                                                                                             &amp;                                                                                                                                  &amp; $\textbf{X}_{\text{\o}}$                                                                             &amp;                                                                                                                                   &amp; X                          &amp; $\textbf{X}_{\text{\o}}$                   &amp;              &amp; X                                         &amp;                             &amp; $\textbf{X}_{\text{\o}}$ &amp;                       &amp; X  &amp;  &amp; VII                                          &amp; \o                                 &amp; \same    &amp; +m2/root \\
+    \cmidrule[1.2pt]{3-18}
+                                           &amp; \ldelim\{{9}{15mm}[Minor]    &amp; minor-major                                &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp; $\textbf{X}_{-}$                                                                                     &amp;                                                                                                                                   &amp; X                          &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp;                          &amp; $\textbf{X}_\Delta$   &amp; X  &amp;  &amp; I                                            &amp; -\Delta                            &amp; \same    &amp; \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; 2nd mel minor                              &amp; X                           &amp; \cellcolor{Gray1} $\textbf{X}_{\flat 9}$                                                                                        &amp;                                                                                                                                  &amp; X                                                                                                    &amp;                                                                                                                                   &amp; $\textbf{X}_{\text{sus4}}$ &amp;                                            &amp; X            &amp;                                           &amp; X                           &amp; X                        &amp;                       &amp; X  &amp;  &amp; II                                           &amp; $\text{sus}^{\flat 9}$             &amp; -7 \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Lydian aug.                                &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}_\Delta$                                                                                                               &amp;                            &amp; X                                          &amp;              &amp; \cellcolor{Gray4} $\textbf{X}_{\sharp 5}$ &amp; X                           &amp;                          &amp; $\textbf{X}_\Delta$   &amp; X  &amp;  &amp; III                                          &amp; $\Delta^{\sharp 5}_$ {\tiny V/III} &amp; $\Delta$ &amp; +M3/root \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; Lydian dom.                                &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}$                                                                                                                      &amp;                            &amp; \cellcolor{Gray3} $\textbf{X}_{\sharp 11}$ &amp; X            &amp;                                           &amp; X                           &amp; $\textbf{X}_7$           &amp;                       &amp; X  &amp;  &amp; IV                                           &amp; $7^{\sharp 11}$                    &amp; 7        &amp; \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; 5th mel minor                              &amp; $\textbf{X}_{\mathrm{V}}$   &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; $\textbf{X}_{\Delta}$                                                                                                             &amp; $\textbf{X}_{\mathrm{I}}$  &amp;                                            &amp; X            &amp; $\textbf{X}_{-}$                          &amp;                             &amp; X                        &amp;                       &amp; X  &amp;  &amp; V                                            &amp; I-\Delta/V                         &amp; 7        &amp; \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; half-dim.                                  &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp; $\textbf{X}_\text{\o}$                                                                               &amp;                                                                                                                                   &amp; X                          &amp; $\textbf{X}_\text{\o}$                     &amp;              &amp; X                                         &amp;                             &amp; $\textbf{X}_\text{\o}$   &amp;                       &amp; X  &amp;  &amp; VI                                           &amp; \o                                 &amp; \same    &amp; \\ 
+    \cmidrule{3-17}
+                                           &amp;                              &amp; altered                                    &amp; X                           &amp; \cellcolor{Gray1} $\textbf{X}_{\flat 9}$                                                                                        &amp;                                                                                                                                  &amp; \cellcolor{Gray2} $\textbf{X}_{\sharp 9}$                                                            &amp; X                                                                                                                                 &amp;                            &amp; \cellcolor{Gray3} $\textbf{X}_{\sharp 11}$ &amp;              &amp; \cellcolor{Gray5} $\textbf{X}_{\flat 13}$ &amp;                             &amp; X                        &amp;                       &amp; X  &amp;  &amp; VII                                          &amp; 7alt                               &amp; \same    &amp; \pm TT/root\\
+    \cmidrule[1.2pt]{3-18}
+    \ldelim\{{2}{10mm}[oct.]           &amp; \ldelim\{{2}{15mm}[Dim.\, ]  &amp; dim hs/ws                                  &amp; X                           &amp; \cellcolor{Gray1} $\textbf{X}_{\flat 9}$                                                                                        &amp;                                                                                                                                  &amp; \cellcolor{Gray2} $\textbf{X}_{\sharp 9}$                                                            &amp; X                                                                                                                                 &amp;                            &amp; \cellcolor{Gray3} $\textbf{X}_{\sharp 11}$ &amp; X            &amp;                                           &amp; X                           &amp; X                        &amp;                       &amp; X  &amp;  &amp; $\stackrel{\textbf{m3}}{{\tiny \text{sym}}}$ &amp; $7^{\flat 9}$                      &amp; o        &amp; -m3/root \\
+    \cmidrule{3-17}
+                                           &amp;                              &amp; dim ws/hs                                  &amp; $\textbf{X}{}_{\mathrm{o}}$ &amp;                                                                                                                                 &amp; X                                                                                                                                &amp; $\textbf{X}{}_{\mathrm{o}}$                                                                          &amp;                                                                                                                                   &amp; X                          &amp; $\textbf{X}{}_{\mathrm{o}}$                &amp;              &amp; X                                         &amp; $\textbf{X}{}_{\mathrm{o}}$ &amp;                          &amp; X                     &amp; X  &amp;  &amp; $\stackrel{\textbf{m3}}{{\tiny \text{sym}}}$ &amp; o                                  &amp; \same    &amp; -m2/root  \\
+    \cmidrule[1.2pt]{3-18}
+    \ldelim\{{1}{10mm}[hex.]           &amp; \ldelim\{{1}{15mm}[W-T\,\, ] &amp; whole-tone                                 &amp; X                           &amp;                                                                                                                                 &amp; X                                                                                                                                &amp;                                                                                                      &amp; X                                                                                                                                 &amp;                            &amp; \cellcolor{Gray3} $\textbf{X}_{\sharp 11}$ &amp;              &amp; \cellcolor{Gray4} $\textbf{X}_{\sharp 5}$ &amp;                             &amp; X                        &amp;                       &amp; X  &amp;  &amp; $\stackrel{\textbf{M2}}{{\tiny \text{sym}}}$ &amp; $7^{\sharp 5}$                     &amp; \same \\ 
+\end{tabular} 
+</pre>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Levine, Mark, 1995, <i>The jazz theory book</i> 
+</p></div></div>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
