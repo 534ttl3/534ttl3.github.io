@@ -41,7 +41,8 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #242424;
+  background-color: white;
+  border-bottom:2px solid black;
   overflow: hidden;
   position: relative;
 }
@@ -52,9 +53,10 @@
     float: right;
 }
 
+
 .projectlink, .aboutlink {
   display: block;
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
 }
@@ -67,39 +69,15 @@
     float: right;
 }
 
-.projectlink:hover:not(.active){
+.projectlink:hover:not(.active), .aboutlink:hover:not(.active){
+  background-color: whitesmoke;
+}
+
+/* .topbar a:hover:not(.active){
   background-color: #555;
   color: white;
-}
+} */
 
-.topbar a:hover:not(.active){
-  background-color: #555;
-  color: white;
-}
-
-@media screen and (max-width: 400px) {
-.projectlink, .aboutlink {
-    text-align: center;
-    float: none;
-  }
-
-  .projectlink, .aboutlink {
-    text-align: center;
-    float: none;
-  }
-
-  .aboutlink {
-    text-align: center;
-    float: none;
-    border-bottom: none;
-    border-top: 5px solid aquamarine;
-  }
-
-  .slidingtopbar {
-      overflow: auto;
-      width: auto;
-  }
-}
 
 .projectlink {
     border-top: 5px solid cornflowerblue;
@@ -110,17 +88,42 @@ color: #646769;
 font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
 font-size: .75em;
 margin-right: 1em;
+min-width: 80px;
+display: inline-block;
+}
+
+.post-link {
+    display: inline-block;
+    align-self: bottom;
 }
 
 .post-container-div {
-border-left: 5px solid cornflowerblue;
-padding-left: 25px;
-padding-top: 5px;
-padding-bottom: 10px;
-border-right: 5px solid cornflowerblue;
-background: aliceblue;
-margin-bottom: 25px;
-margin-top: 25px;
+padding:5px;
+transition: 0.3s;
+}
+
+.post-container-div:hover {
+    padding-left: 10px;
+    background: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+    border:none;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+      /* border-top:2px solid black; */
+  }
+
+  .post-link {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -166,15 +169,20 @@ font-family: "Courier New", Courier, monospace;
 
 .footpara {
     width: 99%;
-    text-alignt: left;
-    float: right;
+    text-align: left;
     padding: 0;
     margin: 0;
+    display: inline;
 }
 
 .footdef {
     /* line-height: 3em; */
     padding-bottom: 30px;
+}
+
+.footdef > sup {
+display:inline;
+padding-right: 10px;
 }
 
 
@@ -201,11 +209,15 @@ p > img {
     text-align: right;
     vertical-align: middle;
 }
+
+p.footpara > a {
+display: inline-flex;
+}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="slidingtopbar"><a  class="projectlink" href="../index.html">derivations-site</a>
+  <div class="slidingtopbar"><a  class="projectlink" href="../index.html">Derivations Notebook</a>
 <a  class="projectlink"  href="../sitemap.html">Sitemap</a>
 <a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/quantum-mechanics/instantaneous-eigenstates.org">Edit on Github</a>
 <a  class="aboutlink"  href="../about.html">About</a>
@@ -219,8 +231,8 @@ p > img {
 Sorry, your browser does not support SVG.</object>
 </p>
 
-<div id="outline-container-org6a0dd34" class="outline-2">
-<h2 id="org6a0dd34"><span class="section-number-2">1</span> Finding an <i>instantanenous eigenstate</i> analytically?</h2>
+<div id="outline-container-orgd2299b2" class="outline-2">
+<h2 id="orgd2299b2"><span class="section-number-2">1</span> Finding an <i>instantanenous eigenstate</i> analytically?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://youtu.be/0AM6arPSszI?list=PLUl4u3cNGP60Zcz8LnCDFI8RPqRhJbb4L&amp;t=612">Here</a><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, it is proposed<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> that the SEQ
@@ -256,7 +268,7 @@ Sorry, your browser does not support SVG.</object> in the more <a href="https://
 
 
 
-<div id="org2c0dcdd" class="equation-container">
+<div id="org6fa3201" class="equation-container">
 <span class="equation">
 <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_d03b7df0868d9809f1489070601a02f74d572772.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
@@ -266,12 +278,12 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org569a221" class="outline-2">
-<h2 id="org569a221"><span class="section-number-2">2</span> More general approach: Here you see what is the condition of the adiabatic approximation!</h2>
+<div id="outline-container-org7eee5c3" class="outline-2">
+<h2 id="org7eee5c3"><span class="section-number-2">2</span> More general approach: Here you see what is the condition of the adiabatic approximation!</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A differential equation for each individual <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_c3a4710816570edf64818cdae1db8a08a61d295a.svg" class="org-svg">
-Sorry, your browser does not support SVG.</object> can be derived from the more general ansatz <a href="#org2c0dcdd">2</a> by inserting it into the SEQ and then projecting a <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ae0e4829e76de2f2f96d5af778cea4b7213fe19b.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> can be derived from the more general ansatz <a href="#org6fa3201">2</a> by inserting it into the SEQ and then projecting a <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_ae0e4829e76de2f2f96d5af778cea4b7213fe19b.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object> from the left. 
 </p>
 
@@ -300,7 +312,7 @@ Sorry, your browser does not support SVG.</object> from the left)
 </p>
 
 
-<div id="orge2018a5" class="equation-container">
+<div id="org3f90e4a" class="equation-container">
 <span class="equation">
 <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_9020ed47adde197675eaf8d68bf67e09b0b3dbd7.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
@@ -347,8 +359,8 @@ Sorry, your browser does not support SVG.</object> .
 </div>
 </div>
 
-<div id="outline-container-org0b2b951" class="outline-2">
-<h2 id="org0b2b951"><span class="section-number-2">3</span> Transition between two instantaneous energy eigenstates</h2>
+<div id="outline-container-org60ae194" class="outline-2">
+<h2 id="org60ae194"><span class="section-number-2">3</span> Transition between two instantaneous energy eigenstates</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 i.e. evolution of the total wave function with <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_849f2f4520c281eb7746407a98580f1e6287883c.svg" class="org-svg">
@@ -395,7 +407,7 @@ Sorry, your browser does not support SVG.</object>
 <li><p>
 contribution of the coupling term: 
 around <object type="image/svg+xml" data="ltximg/instantaneous-eigenstates_7ac4a25d85a505c1ac98982a3bb1ad8f720f365a.svg" class="org-svg">
-Sorry, your browser does not support SVG.</object> the coupling term <a href="#orge2018a5">4</a> contributes. 
+Sorry, your browser does not support SVG.</object> the coupling term <a href="#org3f90e4a">4</a> contributes. 
 </p>
 
 <p>
@@ -419,8 +431,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org9945d13" class="outline-2">
-<h2 id="org9945d13"><span class="section-number-2">4</span> Pay attention to your language</h2>
+<div id="outline-container-org37d8ab1" class="outline-2">
+<h2 id="org37d8ab1"><span class="section-number-2">4</span> Pay attention to your language</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>If you say <i>adiabatic evolution</i> you mean that the coupled system stays in it's initial instantaneous eigenstate.</li>
@@ -429,8 +441,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org3ec9f47" class="outline-2">
-<h2 id="org3ec9f47"><span class="section-number-2">5</span> Resources</h2>
+<div id="outline-container-org1526d7c" class="outline-2">
+<h2 id="org1526d7c"><span class="section-number-2">5</span> Resources</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="https://en.wikipedia.org/wiki/Adiabatic_theorem#Avoided_curve_crossing">Adiabatic theorem - Wikipedia, Avoided level crossing</a></li>

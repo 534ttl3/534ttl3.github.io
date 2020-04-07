@@ -41,7 +41,8 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #242424;
+  background-color: white;
+  border-bottom:2px solid black;
   overflow: hidden;
   position: relative;
 }
@@ -52,9 +53,10 @@
     float: right;
 }
 
+
 .projectlink, .aboutlink {
   display: block;
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
 }
@@ -67,39 +69,15 @@
     float: right;
 }
 
-.projectlink:hover:not(.active){
+.projectlink:hover:not(.active), .aboutlink:hover:not(.active){
+  background-color: whitesmoke;
+}
+
+/* .topbar a:hover:not(.active){
   background-color: #555;
   color: white;
-}
+} */
 
-.topbar a:hover:not(.active){
-  background-color: #555;
-  color: white;
-}
-
-@media screen and (max-width: 400px) {
-.projectlink, .aboutlink {
-    text-align: center;
-    float: none;
-  }
-
-  .projectlink, .aboutlink {
-    text-align: center;
-    float: none;
-  }
-
-  .aboutlink {
-    text-align: center;
-    float: none;
-    border-bottom: none;
-    border-top: 5px solid aquamarine;
-  }
-
-  .slidingtopbar {
-      overflow: auto;
-      width: auto;
-  }
-}
 
 .projectlink {
     border-top: 5px solid cornflowerblue;
@@ -110,17 +88,42 @@ color: #646769;
 font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
 font-size: .75em;
 margin-right: 1em;
+min-width: 80px;
+display: inline-block;
+}
+
+.post-link {
+    display: inline-block;
+    align-self: bottom;
 }
 
 .post-container-div {
-border-left: 5px solid cornflowerblue;
-padding-left: 25px;
-padding-top: 5px;
-padding-bottom: 10px;
-border-right: 5px solid cornflowerblue;
-background: aliceblue;
-margin-bottom: 25px;
-margin-top: 25px;
+padding:5px;
+transition: 0.3s;
+}
+
+.post-container-div:hover {
+    padding-left: 10px;
+    background: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+.projectlink, .aboutlink {
+    text-align: center;
+    float: none;
+    border:none;
+  }
+
+  .slidingtopbar {
+      overflow: auto;
+      width: auto;
+      /* border-top:2px solid black; */
+  }
+
+  .post-link {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -166,15 +169,20 @@ font-family: "Courier New", Courier, monospace;
 
 .footpara {
     width: 99%;
-    text-alignt: left;
-    float: right;
+    text-align: left;
     padding: 0;
     margin: 0;
+    display: inline;
 }
 
 .footdef {
     /* line-height: 3em; */
     padding-bottom: 30px;
+}
+
+.footdef > sup {
+display:inline;
+padding-right: 10px;
 }
 
 
@@ -201,11 +209,15 @@ p > img {
     text-align: right;
     vertical-align: middle;
 }
+
+p.footpara > a {
+display: inline-flex;
+}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="slidingtopbar"><a  class="projectlink" href="./index.html">derivations-site</a>
+  <div class="slidingtopbar"><a  class="projectlink" href="./index.html">Derivations Notebook</a>
 <a  class="projectlink"  href="./sitemap.html">Sitemap</a>
 <a  class="projectlink"  href="https://github.com/534ttl3/derivations-site/./blob/master/org/testpost.org">Edit on Github</a>
 <a  class="aboutlink"  href="./about.html">About</a>
@@ -218,24 +230,24 @@ p > img {
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgde9d37f">1. Latex Fragments</a>
+<li><a href="#orga1a2e2e">1. Latex Fragments</a>
 <ul>
-<li><a href="#org5dc0dd4">1.1. nbrd equation environments</a></li>
+<li><a href="#orgd28f2c6">1.1. nbrd equation environments</a></li>
 </ul>
 </li>
-<li><a href="#orge7ada36">2. Graphics Rendering:</a></li>
-<li><a href="#org05e2366">3. Export block (to latex)</a>
+<li><a href="#org9491a14">2. Graphics Rendering:</a></li>
+<li><a href="#orge044ff1">3. Export block (to latex)</a>
 <ul>
-<li><a href="#org8ed602f">3.1. Table</a></li>
+<li><a href="#orgac7c897">3.1. Table</a></li>
 </ul>
 </li>
-<li><a href="#org9ed8b1c">4. Source block (to latex)</a></li>
-<li><a href="#org0db1f7b">5. Strategy</a></li>
-<li><a href="#org49db7eb">6. Test</a></li>
-<li><a href="#org6c9d3a6">7. Equation 1</a></li>
-<li><a href="#org7056bc6">8. edited</a></li>
-<li><a href="#org8917282">9. Equation 2</a></li>
-<li><a href="#org9d0158a">10. plot</a></li>
+<li><a href="#orgad018f3">4. Source block (to latex)</a></li>
+<li><a href="#orgc005fc8">5. Strategy</a></li>
+<li><a href="#orgdff8098">6. Test</a></li>
+<li><a href="#orgc9cd912">7. Equation 1</a></li>
+<li><a href="#orgeb0a593">8. edited</a></li>
+<li><a href="#org54d71e2">9. Equation 2</a></li>
+<li><a href="#org1d0d419">10. plot</a></li>
 </ul>
 </div>
 </div>
@@ -244,12 +256,12 @@ Hello
 This is a citation: <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
 </p>
 
-<div id="outline-container-orgde9d37f" class="outline-2">
-<h2 id="orgde9d37f"><span class="section-number-2">1</span> Latex Fragments</h2>
+<div id="outline-container-orga1a2e2e" class="outline-2">
+<h2 id="orga1a2e2e"><span class="section-number-2">1</span> Latex Fragments</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org5dc0dd4" class="outline-3">
-<h3 id="org5dc0dd4"><span class="section-number-3">1.1</span> nbrd equation environments</h3>
+<div id="outline-container-orgd28f2c6" class="outline-3">
+<h3 id="orgd28f2c6"><span class="section-number-3">1.1</span> nbrd equation environments</h3>
 <div class="outline-text-3" id="text-1-1">
 
 <div class="equation-container">
@@ -264,7 +276,7 @@ Sorry, your browser does not support SVG.</object>
 Some text in between
 </p>
 
-<div id="org71faaf5" class="equation-container">
+<div id="org4bb399d" class="equation-container">
 <span class="equation">
 <object type="image/svg+xml" data="ltximg/testpost_f8c5298420b07fe8be9e30391e640d77ba62e061.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
@@ -273,25 +285,25 @@ Sorry, your browser does not support SVG.</object>
 </div>
 
 <p>
-And this is an equation <a href="#org71faaf5">2</a>
+And this is an equation <a href="#org4bb399d">2</a>
 </p>
 
 <p>
 Some code: 
 </p>
 <div class="org-src-container">
-<pre class="src src-shell-script" id="org52e1c82">echo hello world 
+<pre class="src src-shell-script" id="org265f036">echo hello world 
 </pre>
 </div>
 <p>
-<a href="#org52e1c82">1</a> is a reference to src block
+<a href="#org265f036">1</a> is a reference to src block
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge7ada36" class="outline-2">
-<h2 id="orge7ada36"><span class="section-number-2">2</span> Graphics Rendering:</h2>
+<div id="outline-container-org9491a14" class="outline-2">
+<h2 id="org9491a14"><span class="section-number-2">2</span> Graphics Rendering:</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 SVG Bear 1: absolute path
@@ -311,19 +323,19 @@ PDF Bear:
 </div>
 </div>
 
-<div id="outline-container-org05e2366" class="outline-2">
-<h2 id="org05e2366"><span class="section-number-2">3</span> Export block (to latex)</h2>
+<div id="outline-container-orge044ff1" class="outline-2">
+<h2 id="orge044ff1"><span class="section-number-2">3</span> Export block (to latex)</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org8ed602f" class="outline-3">
-<h3 id="org8ed602f"><span class="section-number-3">3.1</span> Table</h3>
+<div id="outline-container-orgac7c897" class="outline-3">
+<h3 id="orgac7c897"><span class="section-number-3">3.1</span> Table</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9ed8b1c" class="outline-2">
-<h2 id="org9ed8b1c"><span class="section-number-2">4</span> Source block (to latex)</h2>
+<div id="outline-container-orgad018f3" class="outline-2">
+<h2 id="orgad018f3"><span class="section-number-2">4</span> Source block (to latex)</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
 <pre class="src src-latex">\begin{equation}
@@ -337,8 +349,8 @@ a &amp;= b\\
 </div>
 </div>
 
-<div id="outline-container-org0db1f7b" class="outline-2">
-<h2 id="org0db1f7b"><span class="section-number-2">5</span> Strategy</h2>
+<div id="outline-container-orgc005fc8" class="outline-2">
+<h2 id="orgc005fc8"><span class="section-number-2">5</span> Strategy</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 to save the fragments 
@@ -353,8 +365,8 @@ First, they generate absolute org-mode text links, before converting them to htm
 </div>
 </div>
 
-<div id="outline-container-org49db7eb" class="outline-2">
-<h2 id="org49db7eb"><span class="section-number-2">6</span> Test</h2>
+<div id="outline-container-orgdff8098" class="outline-2">
+<h2 id="orgdff8098"><span class="section-number-2">6</span> Test</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Hey There <object type="image/svg+xml" data="ltximg/testpost_197a54b137c8bb7e1ba8df682d858914edd64301.svg" class="org-svg">
@@ -363,8 +375,8 @@ Sorry, your browser does not support SVG.</object> and there
 </div>
 </div>
 
-<div id="outline-container-org6c9d3a6" class="outline-2">
-<h2 id="org6c9d3a6"><span class="section-number-2">7</span> Equation 1</h2>
+<div id="outline-container-orgc9cd912" class="outline-2">
+<h2 id="orgc9cd912"><span class="section-number-2">7</span> Equation 1</h2>
 <div class="outline-text-2" id="text-7">
 
 <div class="equation-container">
@@ -377,8 +389,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org7056bc6" class="outline-2">
-<h2 id="org7056bc6"><span class="section-number-2">8</span> edited</h2>
+<div id="outline-container-orgeb0a593" class="outline-2">
+<h2 id="orgeb0a593"><span class="section-number-2">8</span> edited</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 from github
@@ -386,8 +398,8 @@ from github
 </div>
 </div>
 
-<div id="outline-container-org8917282" class="outline-2">
-<h2 id="org8917282"><span class="section-number-2">9</span> Equation 2</h2>
+<div id="outline-container-org54d71e2" class="outline-2">
+<h2 id="org54d71e2"><span class="section-number-2">9</span> Equation 2</h2>
 <div class="outline-text-2" id="text-9">
 
 <div class="equation-container">
@@ -400,8 +412,8 @@ Sorry, your browser does not support SVG.</object>
 </div>
 </div>
 
-<div id="outline-container-org9d0158a" class="outline-2">
-<h2 id="org9d0158a"><span class="section-number-2">10</span> plot</h2>
+<div id="outline-container-org1d0d419" class="outline-2">
+<h2 id="org1d0d419"><span class="section-number-2">10</span> plot</h2>
 <div class="outline-text-2" id="text-10">
 <div class="org-src-container">
 <pre class="src src-python">import matplotlib.pyplot as plt
